@@ -7,23 +7,29 @@ import BlogsArray from '../arrays/blogsArray';
 import Header from '../components/header';
 import CategoriesSection from '../components/categories';
 import Categories from '../arrays/categories';
-import categories from '../arrays/categories';
+import Star from '../components/star';
 
 export default function Home(props) {
-  const[liked, setLiked] = useState(true);
+  const[likedItems, setLikedItems] = useState({});
     useEffect(() => {
       AOS.init({
         duration: 1000,
         once: false,
       });
     }, []);
-    function handleStarClick(){
-      setLiked(liked => !liked);
-    }
+
+    function handleClick(id) {
+  setLikedItems(prev => ({
+    ...prev,
+    [id]: !prev[id]
+  }));
+}
+
   return (
     <div>
     {/* Header */}
     <Header/>
+    
      {/* show case */}
     <section className="text-light p-5 text-center text-sm-start raised-section" data-aos="fade-up">
         <div className="container">
@@ -58,7 +64,9 @@ export default function Home(props) {
      </section>
 
      {/* categories */}
+     
      <CategoriesSection id={Categories.id} category={Categories}/>
+     
      {/* Featured Products */}
      <section data-aos="fade-up">
       <div className="container d-flex g-4">
@@ -156,6 +164,7 @@ export default function Home(props) {
         {/* New Arrivals */}
         <div className='griddng3 mb-5'>
         {newArrivals.map(item => {
+          
           return(
             <div className='dark8 radius20' key={item.id}>
             <img 
@@ -170,11 +179,11 @@ export default function Home(props) {
               </span>
               <span className='half-flex gap-4'>
               <h6>{item.price}</h6>
-              {liked ? <i 
-              className='fa fa-star' 
-              onClick={handleStarClick}
-              style={{cursor: 'pointer'}}
-              ></i>: <img src='../src/assets/furniture/star-regular.svg' className='star-size' onClick={handleStarClick}/>}
+              <Star 
+               on={likedItems[item.id] || false}
+               handleClick={() => handleClick(item.id)}
+              />
+ 
               <i className="fa fa-shopping-cart text-white"></i>
               </span>
             </div>
@@ -225,7 +234,7 @@ export default function Home(props) {
 
      {/* Total clients */}
      <section className='customers' style={{marginBottom: '100px'}}>
-      <div className="container d-flex text-light">
+      <div className="container d-flex text-light mb-5">
         <div className='percent55'>
           <h1>Explore millions of offerings tailored to your business needs</h1>
         </div>
@@ -249,6 +258,9 @@ export default function Home(props) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="card w-full bg-secondary container flex text-center text-light mt-5">
+        <i className="fa fa-google">google</i>
       </div>
      </section>
      {/* Footer */}

@@ -18,6 +18,9 @@
   --border-color1: #eeeeee;
   --border-color2: #2e2e2e;
 }
+.bg-logo{
+  color: var(--background-color-light);
+}
 .bg-color{
   background-color: var(--main-color-dark) !important;
 }
@@ -164,4 +167,16 @@
 .star-size{
   width: 20px !important;
   color: white;
+}
+.btn-hover{
+  transform: scale(1);
+  transition: transform 0.4s ease;
+}
+.btn-hover:hover{ 
+  transform: scale(0.99);
+}
+.logo-text{
+  -webkit-text-stroke: var(--border-color1) 1px;
+  color: transparent !important;
+  font-weight: bold;
 }
