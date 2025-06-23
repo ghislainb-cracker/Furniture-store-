@@ -1,6 +1,7 @@
 :root{
   --background-color: #1e90ff;
   --background-color-light: #44a3ff;
+  --background-color-light2: #a9d4fe;
   --main-color-dark: #000000;
   --main-color-dark2: #030303;
   --main-color-dark3: #121212;
@@ -23,6 +24,9 @@
 }
 .bg-color{
   background-color: var(--main-color-dark) !important;
+}
+.lightblue2{
+  background-color: var(--background-color-light2);
 }
 .dark8{
   background-color: var(--main-color-dark7) !important;

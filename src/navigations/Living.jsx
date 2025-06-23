@@ -1,7 +1,9 @@
 import React from "react";
 import Header from '../components/header';
-
+import Bamboo from "../components/bamboo";
+import Card from "../components/card";
 export default function Living(){
+    
     return(
         <>
          {/* Header */}
@@ -127,112 +129,132 @@ export default function Living(){
             </div>
          </section>
          
-         {/* Featured Products */}
-         <section className="flex justify-content-center">
-            <div className="a-third h-4">
-                <h4 className="text-light mb-4">Shop Top Categories</h4>
-                <div id="all-categories">
-                    <div className="container card dark8 text-light mb-4 ">
-                        <div className="flex m-0 p-0 gap-4">
-                        <img 
-                        src="../src/assets/furniture/cat-chair.png" 
-                        alt="" 
-                        className="img-fluid align-self-center"
-                        style={{width: '60px', height: '50px', objectFit: 'cover'}}
-                        />
+        {/* Featured Products */}
+                 <section className="flex justify-content-center">
+                    <div className="a-third h-4">
+                        <h4 className="text-light mb-4">Shop Top Categories</h4>
+                        <div id="all-categories">
+                            <div className="container card dark8 text-light mb-4 ">
+                                <div className="flex m-0 p-0 gap-4">
+                                <img 
+                                src="../src/assets/furniture/cat-chair.png" 
+                                alt="" 
+                                className="img-fluid align-self-center"
+                                style={{width: '60px', height: '50px', objectFit: 'cover'}}
+                                />
+                                <div>
+                                <h5>Sofas</h5>  
+                                <p className="white2">discover luxiariou sofas</p>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="container card dark8 text-light mb-4 ">
+                                <div className="flex m-0 p-0 gap-4">
+                                <img 
+                                src="../src/assets/furniture/cat-desk.png" 
+                                alt="" 
+                                className="img-fluid align-self-center"
+                                style={{width: '60px', height: '50px', objectFit: 'cover'}}
+                                />
+                                <div>
+                                <h5>Sofas</h5>  
+                                <p className="white2">discover luxiariou sofas</p>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="container card dark8 text-light mb-4 ">
+                                <div className="flex m-0 p-0 gap-4">
+                                <img 
+                                src="../src/assets/furniture/cat-bed.png" 
+                                alt="" 
+                                className="img-fluid align-self-center"
+                                style={{width: '60px', height: '50px', objectFit: 'cover'}}
+                                />
+                                <div>
+                                <h5>Sofas</h5>  
+                                <p className="white2">discover luxiariou sofas</p>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="container card dark8 text-light mb-4 ">
+                                <div className="flex m-0 p-0 gap-4">
+                                <img 
+                                src="../src/assets/furniture/cat-table.png" 
+                                alt="" 
+                                className="img-fluid align-self-center"
+                                style={{width: '60px', height: '50px', objectFit: 'cover'}}
+                                />
+                                <div>
+                                <h5>Sofas</h5>  
+                                <p className="white2">discover luxiariou sofas</p>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="container card dark8 text-light mb-4 ">
+                                <div className="flex m-0 p-0 gap-4">
+                                <img 
+                                src="../src/assets/furniture/cat-desk.png" 
+                                alt="" 
+                                className="img-fluid align-self-center"
+                                style={{width: '60px', height: '50px', objectFit: 'cover'}}
+                                />
+                                <div>
+                                <h5>Sofas</h5>  
+                                <p className="white2">discover luxiarious sofas</p>
+                                </div>
+                                </div>
+                            </div>
+                            <div className="card dark8">
+                                <div className="flex justify-content-around">
+                                    <p>Before</p>
+                                    <p>After</p>
+                                </div>
+                                <div className="lightblue2 flex justify-content-between align-items-center position-relative" style={{opacity: 0.5}}>
+                                    <img src="../src/assets/furniture/arrival-7.jpg" alt="" style={{width: '157px'}} />
+                                    {/* Center the icon using flex utilities and absolute positioning */}
+                                    <div 
+                                        className="bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
+                                        style={{
+                                            width: '50px',
+                                            height: '50px',
+                                            left: '50%',
+                                            top: '50%',
+                                            transform: 'translate(-50%, -50%)',
+                                            zIndex: 2
+                                        }}
+                                    >
+                                        <i className="fa fa-chevron-right text-light"></i>
+                                    </div>
+                                    <img src="../src/assets/furniture/arrival-7.jpg" alt="" style={{width: '157px'}}/>
+                                </div>
+                            </div>
+                    </div>
+                     <div className="bg-secondary w-full h-full mt-5">
                         <div>
-                        <h5>Sofas</h5>  
-                        <p className="white2">discover luxiariou sofas</p>
-                        </div>
+                            <img src="../src/assets/furniture/arrival-7.jpg" alt="" className="d-flex w-full" style={{width: "100%", height: "100%", objectFit: 'cover'}}/>
+                            <img src="../src/assets/furniture/arrival-1.png" alt="" className="d-none" style={{width: "100%", height: "100%", objectFit: 'cover'}}/>
+                            <img src="../src/assets/furniture/arrival-1.png" alt="" className="d-none" style={{width: "100%", height: "100%", objectFit: 'cover'}}/>
                         </div>
                     </div>
-                    <div className="container card dark8 text-light mb-4 ">
-                        <div className="flex m-0 p-0 gap-4">
-                        <img 
-                        src="../src/assets/furniture/cat-desk.png" 
-                        alt="" 
-                        className="img-fluid align-self-center"
-                        style={{width: '60px', height: '50px', objectFit: 'cover'}}
-                        />
-                        <div>
-                        <h5>Sofas</h5>  
-                        <p className="white2">discover luxiariou sofas</p>
-                        </div>
-                        </div>
                     </div>
-                    <div className="container card dark8 text-light mb-4 ">
-                        <div className="flex m-0 p-0 gap-4">
-                        <img 
-                        src="../src/assets/furniture/cat-bed.png" 
-                        alt="" 
-                        className="img-fluid align-self-center"
-                        style={{width: '60px', height: '50px', objectFit: 'cover'}}
-                        />
-                        <div>
-                        <h5>Sofas</h5>  
-                        <p className="white2">discover luxiariou sofas</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="container card dark8 text-light mb-4 ">
-                        <div className="flex m-0 p-0 gap-4">
-                        <img 
-                        src="../src/assets/furniture/cat-table.png" 
-                        alt="" 
-                        className="img-fluid align-self-center"
-                        style={{width: '60px', height: '50px', objectFit: 'cover'}}
-                        />
-                        <div>
-                        <h5>Sofas</h5>  
-                        <p className="white2">discover luxiariou sofas</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="container card dark8 text-light mb-4 ">
-                        <div className="flex m-0 p-0 gap-4">
-                        <img 
-                        src="../src/assets/furniture/cat-desk.png" 
-                        alt="" 
-                        className="img-fluid align-self-center"
-                        style={{width: '60px', height: '50px', objectFit: 'cover'}}
-                        />
-                        <div>
-                        <h5>Sofas</h5>  
-                        <p className="white2">discover luxiarious sofas</p>
-                        </div>
-                        </div>
-                    </div>
-                    <div className="card dark8">
-                        <div className="flex justify-content-around">
-                            <p>Before</p>
-                            <p>After</p>
-                        </div>
-                        <div>
-                            <img src="../src/assets/furniture/arrival-7.jpg" alt="" style={{width: '150px'}} />
-                            <i className="fa fa-times text-light"></i>
-                            <img src="../src/assets/furniture/arrival-7.jpg" alt="" style={{width: '150px'}}/>
-                        </div>
-                    </div>
-            </div>
-            </div>
-            <div className="a-seventh h-4">
-                <div className="container ms-5">
-                <h4 className="text-light mb-5">Featured Living Room Collections</h4>
-                <div className="griddng3 gap-3">
-                    <div className="text-light">
-                        <img 
-                        src="../src/assets/furniture/arrival-7.jpg" 
-                        alt=""
-                        className='img-fluid mb-2'
-                        style={{width: '270px',height: '160px',borderRadius: '15px', objectFit: 'cover'}} 
-                        />
-                        <h5>Luxury Sofa Sets</h5>
-                        <div className="flex gap-3">
-                        <p>The best curved wood furniture for best home decor</p>
-                        {/* <p 
-                        className="bg-secondary rounded-3 h-2 flex align-items-center justify-content-center"
-                        style={{width: '70px', height: '30px'}}
-                        >38% off</p> */}
+                    <div className="a-seventh h-4">
+                        <div className="container ms-5">
+                        <h4 className="text-light mb-5">Featured Living Room Collections</h4>
+                        <div className="griddng3 gap-3">
+                            <div className="text-light">
+                                <img 
+                                src="../src/assets/furniture/arrival-7.jpg" 
+                                alt=""
+                                className='img-fluid mb-2'
+                                style={{width: '270px',height: '160px',borderRadius: '15px', objectFit: 'cover'}} 
+                                />
+                                <h5>Luxury Sofa Sets</h5>
+                                <div className="flex gap-3">
+                                <p>The best curved wood furniture for best home decor</p>
+                                {/* <p 
+                                className="bg-secondary rounded-3 h-2 flex align-items-center justify-content-center"
+                                style={{width: '70px', height: '30px'}}
+                                >38% off</p> */}
                         </div>
                         <p className="fw-bold">from: <strike>$113</strike>/ To: $895</p>
                     </div>
@@ -407,32 +429,16 @@ export default function Living(){
                         <p>The best curved wood furniture for best home decor</p>
                         <p className="fw-bold">from: <strike>$113</strike>/ To: $895</p>
                     </div>
-                    <div className="text-light">
-                        <img 
-                        src="../src/assets/furniture/arrival-6.jpg" 
-                        alt=""
-                        className='img-fluid mb-2'
-                        style={{width: '270px',height: '160px',borderRadius: '15px', objectFit: 'cover'}} 
-                        />
-                        <h5>Eco-friendly furniture</h5>
-                        <p>
-                            <i className="far fa-star"></i>
-                            <i className="far fa-star"></i>
-                            <i className="far fa-star"></i>
-                            <i className="far fa-star"></i>
-                            <i className="far fa-star"></i>
-                        </p>
-                        <p>The best curved wood furniture for best home decor</p>
-                        <p className="fw-bold">from: <strike>$113</strike>/ To: $895</p>
-                    </div>
+                    
                 </div>
             </div>
             </div>
          </section>
-         {/* Get Inspired */}
-         <section>
+         {/* Bamboo fun section */}
+         < Bamboo />                      
+            
 
-         </section>
         </>
+        
     )
 }
