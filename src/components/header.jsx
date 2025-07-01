@@ -4,7 +4,7 @@ import './header.css';
 export default function Header(){
     return(
         <>
-        <nav className="navbar navbar-expand-lg navbar-dark pb-4 border-bottom border-white border-2">
+        <nav className="navbar navbar-expand-lg navbar-dark pb-4">
               <div className="container position-relative">
                 <a href="/" className="navbar-brand brand-container">
                   <div className='brand-wrapper'>
@@ -18,16 +18,16 @@ export default function Header(){
               <div className="collapse navbar-collapse ms-5" id="navbar">
                 <ul className="navbar-nav nav-links">
                     <li className="nav-item">
-                        <a href="/living" className="nav-link text-light fw-bold">Living</a>
+                        <a href="/living" className="nav-link text-light fw-bold">Home</a>
                     </li>
                     <li className="nav-item">
-                        <a href="/" className="nav-link text-light fw-bold">Sofas</a>
+                        <a href="/" className="nav-link text-light fw-bold">orders</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link text-light fw-bold">Chair</a>
+                        <a href="#" className="nav-link text-light fw-bold">About Us</a>
                     </li>
                     <li className="nav-item">
-                        <a href="#" className="nav-link text-light fw-bold">Tables</a>
+                        <a href="#" className="nav-link text-light fw-bold">Help Center</a>
                     </li>
                 </ul>
               </div>

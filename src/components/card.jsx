@@ -1,4 +1,4 @@
-export default Card=()=>{
+const Card = () => {
 return(
     <>
             <div className="text-light">
@@ -22,3 +22,4 @@ return(
                     </>
 )
 };
+export default Card;

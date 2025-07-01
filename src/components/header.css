@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #1a1a1a;
+    background-color: transparent;
     padding: 1rem 0;
 }
 
@@ -11,7 +11,7 @@
 .brand-wrapper {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .logo-circle {
@@ -43,11 +43,11 @@
 }
 
 .nav-links {
-    margin-left: 2rem;
+    margin-left: 1rem;
 }
 
 .nav-links .nav-item {
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 .nav-links .nav-link {
@@ -129,62 +129,3 @@
 }
 
 /* Sub-category2 Styles */
-
-#sub-category2 > div {
-    background-color: rgba(255, 255, 255, 0.05);
-    width: 140px;
-    height: 140px;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#sub-category2 > div:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-#sub-category2 i {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-#sub-category2 div:hover i {
-    color: #ffffff !important;
-    transform: scale(1.1);
-}
-
-#sub-category2 h5 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 500;
-    transition: all 0.3s ease;
-}
-
-#sub-category2 div:hover h5 {
-    color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    #sub-category2 {
-        gap: 1rem;
-    }
-
-    #sub-category2 > div {
-        width: 120px;
-        height: 120px;
-    }
-
-    #sub-category2 i {
-        font-size: 2rem;
-    }
-
-    #sub-category2 h5 {
-        font-size: 0.9rem;
-    }
-} 
