@@ -1,7 +1,7 @@
 export default
 [
     {
-        id: 1,
+        id: 3001,
         image: "../src/assets/furniture/arrival-2.jpg",
         title: "Tips for Home stylish Decor",
         descrption: "Expert advice to elevate your space with furniture",
@@ -9,7 +9,7 @@ export default
         author_name: "Inspired by Ghislain",
     },
     {
-        id: 2,
+        id: 3002,
         image: "../src/assets/furniture/arrival-5.jpg",
         title: "Tips for small Spaces",
         descrption: "Maximize your space with smart furniture solutions",
@@ -17,7 +17,7 @@ export default
         author_name: "Inspired by MrKae",
     },
     {
-        id: 3,
+        id: 3003,
         image: "../src/assets/furniture/arrival-6.jpg",
         title: "Tips for choosing the right Furniture",
         descrption: "Guidance on selecting the perfect pieces for your home",

@@ -184,3 +184,54 @@
   color: transparent !important;
   font-weight: bold;
 }
+.gradient-bg-animated {
+  background: linear-gradient(270deg, #c2e9fb, #a1c4fd, #c2e9fb);
+  background-size: 400% 400%;
+  animation: gradientBGMove 6s ease-in-out infinite;
+}
+@keyframes gradientBGMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes move {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes zoom {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+  @keyframes scrollTestimonials {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+  }
+  .customer-testimonials-slider .testimonials-track {
+      /* The width is 2x the number of cards for seamless loop */
+      width: max-content;
+  }
+  @media (max-width: 600px) {
+      .testimonial-card {
+          min-width: 90vw !important;
+          max-width: 95vw !important;
+          padding: 18px 8px 16px 8px !important;
+      }
+  }
