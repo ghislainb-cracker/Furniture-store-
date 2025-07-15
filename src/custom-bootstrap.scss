@@ -1,0 +1,44 @@
+// 1. Import Bootstrap functions
+@import "bootstrap/scss/functions";
+
+// 2. Import Bootstrap variables (defines $theme-colors, etc.)
+@import "bootstrap/scss/variables";
+
+// 3. Add your custom colors
+$custom-colors: (
+  "pink": #e91e63,
+  "my-dark-blue": #1a237e,
+);
+
+// 4. Merge your custom colors into Bootstrap's theme colors
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// 5. Import additional Bootstrap maps & utilities (needed for adding custom utilities)
+@import "bootstrap/scss/maps";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
+
+// 6. Extend opacity utility to include opacity-60
+$utilities: map-merge(
+  $utilities,
+  (
+    "opacity": (
+      property: opacity,
+      class: opacity,
+      values: (
+        0: 0,
+        10: 0.1,
+        25: 0.25,
+        50: 0.5,
+        60: 0.6, // ✅ Your custom opacity
+        75: 0.75,
+        80: 0.8,
+        90: 0.9,
+        100: 1
+      )
+    )
+  )
+);
+
+// 7. Finally, import full Bootstrap
+@import "bootstrap/scss/bootstrap";

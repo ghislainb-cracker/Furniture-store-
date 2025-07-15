@@ -2,7 +2,6 @@ import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
 import { useLocation, Link } from "react-router-dom";
 import { Row, Col, Container, Button, Badge, Form, InputGroup, Tooltip, OverlayTrigger, ProgressBar } from "react-bootstrap";
-
 const colorSwatch = {
   Black: "#222",
   White: "#fff",
@@ -39,9 +38,9 @@ const ProductPage = () => {
   // Image gallery
   const images = [
     product.img,
-    "https://via.placeholder.com/600x600?text=Product+Angle",
-    "https://via.placeholder.com/600x600?text=Product+Detail",
-    "https://via.placeholder.com/600x600?text=Product+In+Use"
+    "../src/assets/furniture/6.png",
+    "../src/assets/furniture/7.png",
+    "../src/assets/furniture/8.png"
   ];
 
   // Related products data
@@ -49,7 +48,7 @@ const ProductPage = () => {
     {
       id: 1,
       title: "Modern Lounge Chair",
-      img: "https://via.placeholder.com/300x300?text=Lounge+Chair",
+      img: "../src/assets/furniture/7.png",
       price: "$199.00",
       rating: 4.5,
       reviews: 120
@@ -57,7 +56,7 @@ const ProductPage = () => {
     {
       id: 2,
       title: "Classic Wooden Table",
-      img: "https://via.placeholder.com/300x300?text=Wooden+Table",
+      img: "../src/assets/furniture/8.png",
       price: "$299.00",
       rating: 4.0,
       reviews: 89
@@ -65,7 +64,7 @@ const ProductPage = () => {
     {
       id: 3,
       title: "Minimalist Sofa",
-      img: "https://via.placeholder.com/300x300?text=Minimalist+Sofa",
+      img: "../src/assets/furniture/6.png",
       price: "$399.00",
       rating: 3.5,
       reviews: 54
@@ -105,7 +104,7 @@ const ProductPage = () => {
   ];
 
   return (
-    <Container className="py-5" style={{ color: "#fff", backgroundColor: "#000" }}>
+    <Container className="py-3" style={{ color: "#fff", backgroundColor: "#000" }}>
       {/* Back to Home Button */}
       <div className="mb-4">
         <Link to="/" className="btn btn-outline-light rounded-pill px-4 py-2 shadow-sm" style={{ fontWeight: 600, fontSize: "1.05em" }}>
@@ -137,7 +136,7 @@ const ProductPage = () => {
               </Button>
             </OverlayTrigger>
             <div className="position-absolute bottom-0 start-0 m-3 px-3 py-2 rounded-pill bg-white shadow-sm d-flex align-items-center" style={{ opacity: 0.95 }}>
-              <i className="fas fa-shipping-fast text-primary me-2"></i>
+              <i className="fas fa-shipping-fast text-dark me-2"></i>
               <span className="small text-dark">{shippingETA}</span>
             </div>
           </div>
@@ -164,7 +163,7 @@ const ProductPage = () => {
             ))}
           </Row>
           {/* Product Highlights */}
-          <div className="d-flex justify-content-between mt-4 px-2">
+          {/* <div className="d-flex justify-content-between mt-4 px-2">
             {highlights.map(h => (
               <div key={h.label} className="text-center flex-fill">
                 <div className="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-2" style={{ width: 44, height: 44 }}>
@@ -173,7 +172,7 @@ const ProductPage = () => {
                 <small className="text-light">{h.label}</small>
               </div>
             ))}
-          </div>
+          </div> */}
         </Col>
 
         {/* Product Info */}
@@ -195,16 +194,16 @@ const ProductPage = () => {
                   <i className="fas fa-check-circle me-1"></i> In Stock
                 </Badge>
               </div>
-              <div className="d-flex align-items-center gap-2 mt-1">
-                <ProgressBar now={stockPercent} style={{ width: 120, height: 8, borderRadius: 6 }} variant="info" />
+              {/* <div className="d-flex align-items-center gap-2 mt-1">
+                <ProgressBar now={80} style={{ width: 120, height: 8, borderRadius: 6 }} variant="info" />
                 <span className="small" style={{ color: "#ccc" }}>{stock - sold} left</span>
-              </div>
-            </div>
-            <div className="text-end">
+              </div> */}
               <h2 className="text-danger fw-bold mb-1" style={{ fontSize: "2.1rem", color: "#fff" }}>{product.price}</h2>
               {product.originalPrice && (
                 <small className="text-decoration-line-through" style={{ color: "#bbb" }}>${product.originalPrice}</small>
               )}
+            </div>
+            <div className="text-end">
               <div className="mt-2">
                 <OverlayTrigger
                   placement="left"
@@ -226,7 +225,7 @@ const ProductPage = () => {
           <p className="lead mb-4" style={{ fontSize: "1.15rem", color: "#ccc" }}>{product.desc}</p>
           
           {/* Full Description */}
-          <div className="mb-4">
+          {/* <div className="mb-4">
             <h5 className="mb-3 fw-bold" style={{ color: "#fff" }}>Product Details</h5>
             <ul className="list-unstyled row row-cols-2 g-2">
               <li className="mb-2 col" style={{ color: "#fff" }}>
@@ -246,7 +245,7 @@ const ProductPage = () => {
                 <span style={{ color: "#fff" }}>Eco-friendly manufacturing process</span>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Color Selection */}
           <div className="mb-4">
@@ -377,43 +376,108 @@ const ProductPage = () => {
       </Row>
 
       {/* Reviews Summary */}
-      <Row className="mb-5">
-        <Col md={6}>
-          <div className="rounded-4 shadow-sm p-4 h-100" style={{ background: "#111", color: "#fff" }}>
-            <h4 className="fw-bold mb-3" style={{ color: "#fff" }}>Customer Reviews</h4>
-            <div className="d-flex align-items-center mb-3">
-              <span className="display-5 fw-bold text-primary me-3">{product.rating.toFixed(1)}</span>
+      <Row className="mb-4">
+        <Col md={12}>
+          <div
+            className="rounded-4 shadow-sm px-3 py-2"
+            style={{
+              background: "linear-gradient(90deg, #181818 60%, #232526 100%)",
+              color: "#fff",
+              minHeight: 0,
+              height: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: 16,
+              boxShadow: "0 2px 12px 0 rgba(30,40,60,0.10)",
+            }}
+          >
+            <div className="d-flex align-items-center" style={{ minWidth: 0 }}>
+              <span
+                className="fw-bold"
+                style={{
+                  fontSize: "2.1rem",
+                  color: "#0d6efd",
+                  lineHeight: 1,
+                  marginRight: 12,
+                  minWidth: 48,
+                  textShadow: "0 2px 8px #0002",
+                }}
+              >
+                {product.rating.toFixed(1)}
+              </span>
               <div>
-                <div className="text-warning mb-1">
+                <div className="text-warning" style={{ fontSize: "1.2rem", lineHeight: 1 }}>
                   {[...Array(5)].map((_, i) => (
-                    <i 
-                      key={i} 
+                    <i
+                      key={i}
                       className={`fas fa-star${i < Math.floor(product.rating) ? "" : i < product.rating ? "-half-alt" : ""}`}
+                      style={{ marginRight: 2 }}
                     />
                   ))}
                 </div>
-                <span style={{ color: "#ccc" }}>{product.reviews} reviews</span>
+                <span style={{ color: "#bbb", fontSize: "0.95rem" }}>
+                  {product.reviews} reviews
+                </span>
               </div>
             </div>
-            {reviewSummary.map(r => (
-              <div key={r.stars} className="d-flex align-items-center mb-2">
-                <span className="me-2" style={{ width: 24, color: "#fff" }}>{r.stars} <i className="fas fa-star text-warning"></i></span>
-                <ProgressBar now={r.percent} style={{ flex: 1, height: 8, borderRadius: 6 }} variant="info" />
-                <span className="ms-2 small" style={{ color: "#ccc" }}>{r.percent}%</span>
-              </div>
-            ))}
-            <div className="mt-3">
-              <Button variant="outline-primary" size="sm" className="rounded-pill px-3" style={{ color: "#fff", borderColor: "#0d6efd" }}>
-                <span style={{ color: "#fff" }}>Write a Review</span>
+            <div style={{ flex: 1, marginLeft: 24, minWidth: 0 }}>
+              {reviewSummary.map(r => (
+                <div
+                  key={r.stars}
+                  className="d-flex align-items-center"
+                  style={{ marginBottom: 4 }}
+                >
+                  <span
+                    className="me-2"
+                    style={{
+                      width: 22,
+                      color: "#fff",
+                      fontSize: "0.98rem",
+                      textAlign: "right",
+                      flexShrink: 0,
+                    }}
+                  >
+                    {r.stars} <i className="fas fa-star text-warning" style={{ fontSize: "0.9em" }}></i>
+                  </span>
+                  <ProgressBar
+                    now={r.percent}
+                    style={{
+                      flex: 1,
+                      height: 6,
+                      borderRadius: 4,
+                      background: "#232526",
+                      margin: "0 8px",
+                    }}
+                    variant="info"
+                  />
+                  <span
+                    className="ms-1 small"
+                    style={{ color: "#bbb", minWidth: 32, textAlign: "left" }}
+                  >
+                    {r.percent}%
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="d-flex align-items-center" style={{ marginLeft: 18 }}>
+              <Button
+                variant="outline-primary"
+                size="sm"
+                className="rounded-pill px-3 py-1"
+                style={{
+                  color: "#fff",
+                  borderColor: "#0d6efd",
+                  fontWeight: 500,
+                  fontSize: "0.98rem",
+                  background: "rgba(13,110,253,0.07)",
+                  boxShadow: "0 1px 4px 0 #0001",
+                  whiteSpace: "nowrap",
+                }}
+              >
+                Write a Review
               </Button>
             </div>
-          </div>
-        </Col>
-        <Col md={6}>
-          <div className="rounded-4 shadow-sm p-4 h-100 d-flex flex-column justify-content-center align-items-center" style={{ background: "#111", color: "#fff" }}>
-            <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Review" style={{ width: 80, opacity: 0.7 }} />
-            <div className="mt-3 text-center" style={{ color: "#ccc" }}>"Absolutely love this product! The quality is top-notch and it fits perfectly in my living room."</div>
-            <div className="mt-2 small text-primary" style={{ color: "#0d6efd" }}>– Verified Buyer</div>
           </div>
         </Col>
       </Row>

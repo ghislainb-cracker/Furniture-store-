@@ -220,6 +220,13 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.clamp1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;     /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
   @keyframes scrollTestimonials {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -234,4 +241,17 @@
           max-width: 95vw !important;
           padding: 18px 8px 16px 8px !important;
       }
+  }
+  .cart-icon-overlay:hover{
+    transform: scale(1.1);
+    transition: transform 4s ease-in-out;
+  }
+  .hide-scrollbar {
+    scrollbar-width: none;
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .hotdeal-product-card {
+    transition: box-shadow 0.3s, transform 0.3s;
   }

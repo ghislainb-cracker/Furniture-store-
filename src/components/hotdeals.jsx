@@ -708,7 +708,7 @@ export default function HotDeals(){
                 price: 89.99,
                 oldPrice: 119.99,
                 rating: 4,
-                desc: "Elegant, padded headboard for beds.",
+                desc: "Elegant, padded headboard for beds Solid wood, timeless design.",
                 tag: "20% OFF"
               },
               {
@@ -727,7 +727,7 @@ export default function HotDeals(){
                 oldPrice: 99.99,
                 rating: 3,
                 desc: "Simple, modern, easy to install.",
-                tag: "Hot"
+                tag: "Hot Deal"
               },
               {
                 src: "../src/assets/furniture/head-4.jpg",
@@ -896,13 +896,13 @@ export default function HotDeals(){
                       {/* Tag badge */}
                       <div style={{
                         position: 'absolute',
-                        top: 8,
-                        left: 8,
+                        top: 0,
+                        left: 0,
                         background: prod.tag === "20% OFF" ? "#e53935" : "#1976d2",
                         color: "#fff",
                         fontWeight: 600,
                         fontSize: '0.75rem',
-                        borderRadius: '8px',
+                        borderRadius: '8px 0 8px 0',
                         padding: '2px 10px',
                         zIndex: 2,
                         boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
@@ -931,39 +931,65 @@ export default function HotDeals(){
                           top: 0,
                           width: '100%',
                           height: '100%',
-                          background: hoveredIdx === idx ? 'rgba(30,40,60,0.72)' : 'rgba(0,0,0,0)',
+                          background: hoveredIdx === idx ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0)',
                           color: '#fff',
                           opacity: hoveredIdx === idx ? 1 : 0,
                           pointerEvents: hoveredIdx === idx ? 'auto' : 'none',
                           transition: 'opacity 0.3s, background 0.3s',
                           display: 'flex',
                           flexDirection: 'column',
-                          justifyContent: 'flex-end',
-                          alignItems: 'flex-start',
+                          justifyContent: 'center',
+                          alignItems: 'center',
                           padding: '16px 14px 12px 14px',
                         }}
                       >
-                        <div style={{fontWeight: 700, fontSize: '1.05rem', marginBottom: 2, color: '#fff'}}>
-                          {prod.name}
-                        </div>
-                        <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
+                        <button
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '7px',
+                            background: '#ffffff',
+                            color: '#000000',
+                            border: 'none',
+                            borderRadius: '50%',
+                            padding: '20px',
+                            fontWeight: 700,
+                            fontSize: '1rem',
+                            boxShadow: '0 4px 16px rgba(67,206,162,0.18), 0 1.5px 6px rgba(24,90,157,0.10)',
+                            cursor: 'pointer',
+                            transition: 'background 0.2s, transform 0.2s, box-shadow 0.2s',
+                            outline: 'none',
+                            letterSpacing: '0.02em',
+                            borderColor: '#fff',
+                          }}
+                          onMouseDown={e => e.preventDefault()}
+                          onClick={() => {
+                            // Add to cart logic here
+                            alert(`Added "${prod.name}" to cart!`);
+                          }}
+                          aria-label={`Add ${prod.name} to cart`}
+                          className="cart-icon-overlay"
+                        >
+                          <i className="fa fa-shopping-cart"></i>
+                        </button>
+                        {/* <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
                           {prod.desc}
-                        </div>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
+                        </div> */}
+                        {/* <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
                           <span style={{fontWeight: 700, color: '#ffd700', fontSize: '1.1rem'}}>
                             ${prod.price.toFixed(2)}
                           </span>
                           <strike style={{color: '#bbb', fontSize: '0.95rem'}}>${prod.oldPrice.toFixed(2)}</strike>
-                        </div>
-                        {renderStars(prod.rating)}
+                        </div> */}
+                        {/* {renderStars(prod.rating)} */}
                       </div>
                       {/* Always show name and price at bottom left, but less prominent */}
                       <div style={{
                         position: 'absolute',
-                        left: 10,
-                        bottom: 10,
-                        background: 'rgba(255,255,255,0.92)',
-                        color: '#1a2236',
+                        left: 0,
+                        bottom: 0,
+                        background: 'rgba(0,0,0,0.6)',
+                        color: '#fff',
                         borderRadius: '8px',
                         padding: '3px 10px 2px 10px',
                         fontWeight: 600,
@@ -972,7 +998,7 @@ export default function HotDeals(){
                         opacity: hoveredIdx === idx ? 0 : 1,
                         transition: 'opacity 0.2s'
                       }}>
-                        {prod.name} &nbsp; <span style={{color: '#e53935'}}>${prod.price.toFixed(2)}</span>
+                        {prod.name} &nbsp; <span className="text-danger fs-lg">${prod.price.toFixed(2)}</span>
                       </div>
                     </div>
                   ))}
@@ -1032,7 +1058,7 @@ export default function HotDeals(){
                 price: 89.99,
                 oldPrice: 119.99,
                 rating: 4,
-                desc: "Elegant, padded headboard for beds.",
+                desc: "Elegant, padded headboard for beds Solid wood, timeless design.",
                 tag: "20% OFF"
               },
               {
@@ -1051,7 +1077,7 @@ export default function HotDeals(){
                 oldPrice: 99.99,
                 rating: 3,
                 desc: "Simple, modern, easy to install.",
-                tag: "Hot"
+                tag: "Hot Deal"
               },
               {
                 src: "../src/assets/furniture/head-4.jpg",
@@ -1220,13 +1246,13 @@ export default function HotDeals(){
                       {/* Tag badge */}
                       <div style={{
                         position: 'absolute',
-                        top: 8,
-                        left: 8,
+                        top: 0,
+                        left: 0,
                         background: prod.tag === "20% OFF" ? "#e53935" : "#1976d2",
                         color: "#fff",
                         fontWeight: 600,
                         fontSize: '0.75rem',
-                        borderRadius: '8px',
+                        borderRadius: '8px 0 8px 0',
                         padding: '2px 10px',
                         zIndex: 2,
                         boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
@@ -1255,39 +1281,65 @@ export default function HotDeals(){
                           top: 0,
                           width: '100%',
                           height: '100%',
-                          background: hoveredIdx === idx ? 'rgba(30,40,60,0.72)' : 'rgba(0,0,0,0)',
+                          background: hoveredIdx === idx ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0)',
                           color: '#fff',
                           opacity: hoveredIdx === idx ? 1 : 0,
                           pointerEvents: hoveredIdx === idx ? 'auto' : 'none',
                           transition: 'opacity 0.3s, background 0.3s',
                           display: 'flex',
                           flexDirection: 'column',
-                          justifyContent: 'flex-end',
-                          alignItems: 'flex-start',
+                          justifyContent: 'center',
+                          alignItems: 'center',
                           padding: '16px 14px 12px 14px',
                         }}
                       >
-                        <div style={{fontWeight: 700, fontSize: '1.05rem', marginBottom: 2, color: '#fff'}}>
-                          {prod.name}
-                        </div>
-                        <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
+                        <button
+                          style={{
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '7px',
+                            background: '#ffffff',
+                            color: '#000000',
+                            border: 'none',
+                            borderRadius: '50%',
+                            padding: '20px',
+                            fontWeight: 700,
+                            fontSize: '1rem',
+                            boxShadow: '0 4px 16px rgba(67,206,162,0.18), 0 1.5px 6px rgba(24,90,157,0.10)',
+                            cursor: 'pointer',
+                            transition: 'background 0.2s, transform 0.2s, box-shadow 0.2s',
+                            outline: 'none',
+                            letterSpacing: '0.02em',
+                            borderColor: '#fff',
+                          }}
+                          onMouseDown={e => e.preventDefault()}
+                          onClick={() => {
+                            // Add to cart logic here
+                            alert(`Added "${prod.name}" to cart!`);
+                          }}
+                          aria-label={`Add ${prod.name} to cart`}
+                          className="cart-icon-overlay"
+                        >
+                          <i className="fa fa-shopping-cart"></i>
+                        </button>
+                        {/* <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
                           {prod.desc}
-                        </div>
-                        <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
+                        </div> */}
+                        {/* <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
                           <span style={{fontWeight: 700, color: '#ffd700', fontSize: '1.1rem'}}>
                             ${prod.price.toFixed(2)}
                           </span>
                           <strike style={{color: '#bbb', fontSize: '0.95rem'}}>${prod.oldPrice.toFixed(2)}</strike>
-                        </div>
-                        {renderStars(prod.rating)}
+                        </div> */}
+                        {/* {renderStars(prod.rating)} */}
                       </div>
                       {/* Always show name and price at bottom left, but less prominent */}
                       <div style={{
                         position: 'absolute',
-                        left: 10,
-                        bottom: 10,
-                        background: 'rgba(255,255,255,0.92)',
-                        color: '#1a2236',
+                        left: 0,
+                        bottom: 0,
+                        background: 'rgba(0,0,0,0.6)',
+                        color: '#fff',
                         borderRadius: '8px',
                         padding: '3px 10px 2px 10px',
                         fontWeight: 600,
@@ -1296,7 +1348,7 @@ export default function HotDeals(){
                         opacity: hoveredIdx === idx ? 0 : 1,
                         transition: 'opacity 0.2s'
                       }}>
-                        {prod.name} &nbsp; <span style={{color: '#e53935'}}>${prod.price.toFixed(2)}</span>
+                        {prod.name} &nbsp; <span className="text-danger fs-lg">${prod.price.toFixed(2)}</span>
                       </div>
                     </div>
                   ))}
@@ -1329,20 +1381,6 @@ export default function HotDeals(){
                     <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
-                {/* Hide scrollbar with CSS */}
-                <style>
-                  {`
-                    .hide-scrollbar {
-                      scrollbar-width: none;
-                    }
-                    .hide-scrollbar::-webkit-scrollbar {
-                      display: none;
-                    }
-                    .hotdeal-product-card {
-                      transition: box-shadow 0.3s, transform 0.3s;
-                    }
-                  `}
-                </style>
               </div>
             );
           })()}

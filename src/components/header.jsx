@@ -2,11 +2,13 @@ import React, { useRef, useContext } from "react";
 import './header.css';
 import categories from '../arrays/categories';
 import { CartContext } from "../context/CartContext";
+import { WishlistContext } from "../context/WishlistContext";
 import { Link } from "react-router-dom";
 
 export default function Header(){
     const categoriesRef = useRef(null);
     const { cartItems } = useContext(CartContext);
+    const { wishlistItems } = useContext(WishlistContext);
 
     const scrollCategories = () => {
         if (categoriesRef.current) {
@@ -56,22 +58,30 @@ export default function Header(){
                   <a href="#"><i className="fa fa-search"></i></a>
                 </div>
                 <Link to="/cart" className="text-decoration-none text-dark">
-  <div className="icon-circle position-relative">
-    <i className="fa fa-shopping-cart text-light"></i>
-    {cartItems.length > 0 && (
-      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-        {cartItems.length}
-      </span>
-    )}
-  </div>
-</Link>
+                  <div className="icon-circle position-relative">
+                    <i className="fa fa-shopping-cart text-light"></i>
+                    {cartItems.length > 0 && (
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                          {cartItems.length}
+                      </span>
+                    )}
+                  </div>
+                </Link>
 
                 <div className="icon-circle">
                   <a href="#"><i className="fa fa-user"></i></a>
                 </div>
-                <div className="icon-circle">
-                  <a href="#"><i className="fa fa-heart"></i></a>
-                </div>
+                <Link to="/wishlist" className="text-decoration-none">
+                  <div className="icon-circle position-relative">
+                    <i className="fa fa-heart text-light"></i>
+                    {wishlistItems.length > 0 && (
+                      <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                        {wishlistItems.length}
+                      </span>
+                            )}
+                  </div>
+                </Link>
+
                 <button type='button' className='signup-btn'>Signup</button>
               </div>
               <button 
@@ -97,8 +107,10 @@ export default function Header(){
               >
                 {categories.map(cat => (
                   <div key={cat.id} className="mx-3 text-center flex-shrink-0">
+                    <Link to={`/category/${cat.description.toLowerCase()}`} className="text-decoration-none">
                     <i className={`fa ${cat.icon} fa-lg`} style={{color: '#000000', fontSize: '10px'}}></i>
                     <div style={{fontSize: '0.5rem', color: '#000000'}}>{cat.description}</div>
+                    </Link>
                   </div>
                 ))}
               </div>

@@ -215,9 +215,11 @@ const CartPage = () => {
                     ${total.toFixed(2)}
                   </span>
                 </div>
+                <Link to="/checkout">
                 <button className="btn btn-success w-100 py-2 fw-bold" disabled>
                   Proceed to Checkout
                 </button>
+                </Link>
                 <div className="text-muted mt-2" style={{ fontSize: 13 }}>
                   <i className="fa fa-lock me-1"></i>
                   Secure checkout – coming soon!
