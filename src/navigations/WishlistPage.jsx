@@ -17,12 +17,22 @@ const WishlistPage = () => {
 
   return (
     <div className="container py-4">
-      <h2 className="mb-4 fw-bold">My Wishlist</h2>
+      <div
+        className="w-full rounded-4 px-4 py-3 mb-3 d-flex align-items-center"
+        style={{
+          background: '#2A7B9B',
+          background: 'linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%)'
+        }}
+      >
+        <h2 className="fw-bold text-light">
+          <i className="fa fa-book me-4"></i>Your Shopping Cart
+        </h2>
+      </div>
       <div className="row g-4">
         {wishlistItems.map(product => (
           <div className="col-md-4" key={product.id}>
             <div className="card h-100 shadow-sm border-0">
-              <div className="position-relative bg-light d-flex align-items-center justify-content-center" style={{ height: 220 }}>
+              <div className="position-relative bg-light rounded-3 d-flex align-items-center justify-content-center" style={{ height: 220 }}>
                 <img src={product.img} alt={product.title} className="p-3 object-fit-contain" style={{ maxHeight: 180, maxWidth: "100%" }} />
                 <button
                   type="button"
@@ -46,6 +56,11 @@ const WishlistPage = () => {
           </div>
         ))}
       </div>
+      <button className="btn btn-lg btn-primary text-light mt-5">
+        <Link to="/" className="text-decoration-none text-white">
+         <i className="fa fa-chevron-left me-4 text-light"></i>Return to Home page
+        </Link>
+      </button>
     </div>
   );
 };

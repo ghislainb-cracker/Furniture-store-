@@ -61,605 +61,382 @@ export default function HotDeals(){
   return(
     <>
      <section>
-      <div className="d-block">
+      <div className="d-block mt-5">
+        {/*
+          Refactored: All hardcoded images/cards are now in an array and iterated over.
+        */}
         <div style={{height: "100%", width: '100%', display: "flex", padding: '10px'}}>
           <div style={{width: "80%", display: "grid", gridTemplate: 'auto auto/ repeat(5, 1fr)', gap: 5}}>
-          <div style={{gridColumn: 'span 2', marginBottom: '0px', display: 'block', paddingInline: '5px', color: '#ffffff'}}>
-            <div className="w-full d-flex flex-column justify-content-center align-items-center position-relative" 
-            style={{border: '1px solid white', borderRadius: '15px 15px 0 0', backgroundColor: '#000', color: '#fff', paddingBlock: '10px'}}>
-              <svg
-                      width="60"
-                      height="60"
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      style={{
-                        position: 'absolute',
-                        top: 0,
-                        left: 0,
-                        opacity: 0.3,
-                        zIndex: 0,
-                        pointerEvents: 'none'
-                      }}
-                    >
-                      <rect x="18" y="18" width="44" height="44" rx="12" stroke="#ffffff" strokeWidth="4" />
-                      <circle cx="10" cy="10" r="36" stroke="#ffffff"  strokeWidth="6" />
-                    </svg>
-                    <svg
-                      width="60"
-                      height="60"
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      style={{
-                        position: 'absolute',
-                        top: '20px',
-                        left: '60px',
-                        opacity: 0.3,
-                        zIndex: 0,
-                        pointerEvents: 'none',
-                      }}
-                      >
-                      <rect x="18" y="18" width="44" height="44" rx="12" stroke="#ffffff" strokeWidth="4" style={{animation: 'move 6s linear infinite'}}/>
-                      <circle cx="40" cy="40" r="36" stroke="#ffffff"  strokeWidth="6" style={{animation: 'zoom 5s ease-in-out infinite'}}/>
-                    </svg>
-                    <svg
-                      width="60"
-                      height="60"
-                      viewBox="0 0 60 60"
-                      fill="none"
-                      style={{
-                        position: 'absolute',
-                        bottom: '0px',
-                        right: '2px',
-                        opacity: 0.2,
-                        zIndex: 0,
-                        pointerEvents: 'none'
-                      }}
-                    >
-                      <polygon points="30,5 55,55 5,55" stroke="#fff" strokeWidth="4" fill="none" />
-                      <circle cx="30" cy="30" r="10" stroke="#fff" strokeWidth="2" />
-                    </svg>
-              <h3>Discover</h3>
-              <h2 style={{letterSpacing: '3px'}}><span className="text-danger">HOT </span> Deals</h2>
-            </div>
-            {(() => {
-              // Set the offer end time (e.g., 2 days from now)
-              // You can adjust this to any future date/time
-              const offerEnd = new Date();
-              offerEnd.setDate(offerEnd.getDate() + 2);
-              offerEnd.setHours(23, 59, 59, 999);
+            <div style={{gridColumn: 'span 2', marginBottom: '0px', display: 'block', paddingInline: '5px', color: '#ffffff'}}>
+              <div className="w-full d-flex flex-column justify-content-center align-items-center position-relative" 
+                style={{border: '1px solid white', borderRadius: '15px 15px 0 0', backgroundColor: '#000', color: '#fff', paddingBlock: '10px'}}>
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 80 80"
+                  fill="none"
+                  style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    opacity: 0.3,
+                    zIndex: 0,
+                    pointerEvents: 'none'
+                  }}
+                >
+                  <rect x="18" y="18" width="44" height="44" rx="12" stroke="#ffffff" strokeWidth="4" />
+                  <circle cx="10" cy="10" r="36" stroke="#ffffff"  strokeWidth="6" />
+                </svg>
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 80 80"
+                  fill="none"
+                  style={{
+                    position: 'absolute',
+                    top: '20px',
+                    left: '60px',
+                    opacity: 0.3,
+                    zIndex: 0,
+                    pointerEvents: 'none',
+                  }}
+                >
+                  <rect x="18" y="18" width="44" height="44" rx="12" stroke="#ffffff" strokeWidth="4" style={{animation: 'move 6s linear infinite'}}/>
+                  <circle cx="40" cy="40" r="36" stroke="#ffffff"  strokeWidth="6" style={{animation: 'zoom 5s ease-in-out infinite'}}/>
+                </svg>
+                <svg
+                  width="60"
+                  height="60"
+                  viewBox="0 0 60 60"
+                  fill="none"
+                  style={{
+                    position: 'absolute',
+                    bottom: '0px',
+                    right: '2px',
+                    opacity: 0.2,
+                    zIndex: 0,
+                    pointerEvents: 'none'
+                  }}
+                >
+                  <polygon points="30,5 55,55 5,55" stroke="#fff" strokeWidth="4" fill="none" />
+                  <circle cx="30" cy="30" r="10" stroke="#fff" strokeWidth="2" />
+                </svg>
+                <h3>Discover</h3>
+                <h2 style={{letterSpacing: '3px'}}><span className="text-danger">HOT </span> Deals</h2>
+              </div>
+              {(() => {
+                // Set the offer end time (e.g., 2 days from now)
+                const offerEnd = new Date();
+                offerEnd.setDate(offerEnd.getDate() + 2);
+                offerEnd.setHours(23, 59, 59, 999);
 
-              // Use React hooks from the import at the top of the file
-              // (Assumes: import React, { useState, useEffect } from "react";)
-              function pad(n) {
-                return n.toString().padStart(2, '0');
-              }
+                function pad(n) {
+                  return n.toString().padStart(2, '0');
+                }
 
-              function Countdown() {
-                const [timeLeft, setTimeLeft] = React.useState(() => {
-                  const now = new Date();
-                  const diff = offerEnd - now;
-                  return diff > 0 ? diff : 0;
-                });
+                function Countdown() {
+                  const [timeLeft, setTimeLeft] = React.useState(() => {
+                    const now = new Date();
+                    const diff = offerEnd - now;
+                    return diff > 0 ? diff : 0;
+                  });
 
-                React.useEffect(() => {
-                  if (timeLeft <= 0) return;
-                  const interval = setInterval(() => {
-                    setTimeLeft(prev => {
-                      const next = prev - 1000;
-                      return next > 0 ? next : 0;
-                    });
-                  }, 1000);
-                  return () => clearInterval(interval);
-                }, [timeLeft]);
+                  React.useEffect(() => {
+                    if (timeLeft <= 0) return;
+                    const interval = setInterval(() => {
+                      setTimeLeft(prev => {
+                        const next = prev - 1000;
+                        return next > 0 ? next : 0;
+                      });
+                    }, 1000);
+                    return () => clearInterval(interval);
+                  }, [timeLeft]);
 
-                // Calculate days, hours, minutes, seconds
-                const totalSeconds = Math.floor(timeLeft / 1000);
-                const days = Math.floor(totalSeconds / (3600 * 24));
-                const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
-                const minutes = Math.floor((totalSeconds % 3600) / 60);
-                const seconds = totalSeconds % 60;
+                  // Calculate days, hours, minutes, seconds
+                  const totalSeconds = Math.floor(timeLeft / 1000);
+                  const days = Math.floor(totalSeconds / (3600 * 24));
+                  const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
+                  const minutes = Math.floor((totalSeconds % 3600) / 60);
+                  const seconds = totalSeconds % 60;
 
-                return (
-                  <div
-                    className='text-center p-3 mb-4 rounded-4 mt-2'
-                    style={{
-                      // background: `linear-gradient(135deg, #232526 0%, #414345 100%)`,
-                      position: 'relative',
-                      overflow: 'hidden',
-                      boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
-                      zIndex: 1,
-                      border: '1px solid linear-gradient(270deg, #456738, #8a8493, #958694)'
-                    }}
-                  >
-                    {/* Decorative vector icons in the background */}
-                    <svg
-                      width="80"
-                      height="80"
-                      viewBox="0 0 80 80"
-                      fill="none"
-                      style={{
-                        position: 'absolute',
-                        top: '-18px',
-                        left: '-18px',
-                        opacity: 0.13,
-                        zIndex: 0,
-                        pointerEvents: 'none'
-                      }}
-                    >
-                      <circle cx="40" cy="40" r="36" stroke="#ffffff" strokeWidth="6" />
-                      <rect x="18" y="18" width="44" height="44" rx="12" stroke="#ffffff" strokeWidth="4" />
-                    </svg>
-                    <svg
-                      width="60"
-                      height="60"
-                      viewBox="0 0 60 60"
-                      fill="none"
-                      style={{
-                        position: 'absolute',
-                        bottom: '-12px',
-                        right: '-12px',
-                        opacity: 0.12,
-                        zIndex: 0,
-                        pointerEvents: 'none'
-                      }}
-                    >
-                      <polygon points="30,5 55,55 5,55" stroke="#fff" strokeWidth="4" fill="none" />
-                      <circle cx="30" cy="30" r="10" stroke="#fff" strokeWidth="2" />
-                    </svg>
-                    <h5 className='text-white mb-2' style={{position: 'relative', zIndex: 1, letterSpacing: 1}}>Limited Time Offer</h5>
+                  return (
                     <div
-                      className="d-flex justify-content-center align-items-center gap-2 text-light rounded-pill p-2"
-                      style={{position: 'relative', zIndex: 1, border: '1px solid rgba(209, 209, 209, 0.35)', boxShadow: '0 2px 20px rgba(255, 255, 255, 0.5)'}}
+                      className='text-center p-3 mb-4 rounded-4 mt-2'
+                      style={{
+                        position: 'relative',
+                        overflow: 'hidden',
+                        boxShadow: '0 4px 24px 0 rgba(0,0,0,0.18)',
+                        zIndex: 1,
+                        border: '1px solid linear-gradient(270deg, #456738, #8a8493, #958694)'
+                      }}
                     >
-                      <div
-                        className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                      {/* Decorative vector icons in the background */}
+                      <svg
+                        width="80"
+                        height="80"
+                        viewBox="0 0 80 80"
+                        fill="none"
                         style={{
-                          width: '40px',
-                          height: '40px',
-                          fontSize: '1.2rem',
-                          background: 'rgba(0, 0, 0, 0.92)',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                          position: 'absolute',
+                          top: '-18px',
+                          left: '-18px',
+                          opacity: 0.13,
+                          zIndex: 0,
+                          pointerEvents: 'none'
                         }}
                       >
-                        {pad(days)}
-                      </div>
-                      <span className="text-white h3 mx-2" style={{fontWeight: 700, fontSize: '2rem'}}>:</span>
-                      <div
-                        className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                        <circle cx="40" cy="40" r="36" stroke="#ffffff" strokeWidth="6" />
+                        <rect x="18" y="18" width="44" height="44" rx="12" stroke="#ffffff" strokeWidth="4" />
+                      </svg>
+                      <svg
+                        width="60"
+                        height="60"
+                        viewBox="0 0 60 60"
+                        fill="none"
                         style={{
-                          width: '40px',
-                          height: '40px',
-                          fontSize: '1.2rem',
-                          background: 'rgba(0, 0, 0, 0.92)',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                          position: 'absolute',
+                          bottom: '-12px',
+                          right: '-12px',
+                          opacity: 0.12,
+                          zIndex: 0,
+                          pointerEvents: 'none'
                         }}
                       >
-                        {pad(hours)}
-                      </div>
-                      <span className="text-white h3 mx-2" style={{fontWeight: 700, fontSize: '2rem'}}>:</span>
+                        <polygon points="30,5 55,55 5,55" stroke="#fff" strokeWidth="4" fill="none" />
+                        <circle cx="30" cy="30" r="10" stroke="#fff" strokeWidth="2" />
+                      </svg>
+                      <h5 className='text-white mb-2' style={{position: 'relative', zIndex: 1, letterSpacing: 1}}>Limited Time Offer</h5>
                       <div
-                        className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          fontSize: '1.2rem',
-                          background: 'rgba(0, 0, 0, 0.92)',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
-                        }}
+                        className="d-flex justify-content-center align-items-center gap-2 text-light rounded-pill p-2"
+                        style={{position: 'relative', zIndex: 1, border: '1px solid rgba(209, 209, 209, 0.35)', boxShadow: '0 2px 20px rgba(255, 255, 255, 0.5)'}}
                       >
-                        {pad(minutes)}
-                      </div>
-                      <span className="text-white h3 mx-2" style={{fontWeight: 700, fontSize: '2rem'}}>:</span>
-                      <div
-                        className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
-                        style={{
-                          width: '40px',
-                          height: '40px',
-                          fontSize: '1.2rem',
-                          background: 'rgba(0, 0, 0, 0.92)',
-                          boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
-                        }}
-                      >
-                        {pad(seconds)}
+                        <div
+                          className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                          style={{
+                            width: '40px',
+                            height: '40px',
+                            fontSize: '1.2rem',
+                            background: 'rgba(0, 0, 0, 0.92)',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                          }}
+                        >
+                          {pad(days)}
+                        </div>
+                        <span className="text-white h3 mx-2" style={{fontWeight: 700, fontSize: '2rem'}}>:</span>
+                        <div
+                          className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                          style={{
+                            width: '40px',
+                            height: '40px',
+                            fontSize: '1.2rem',
+                            background: 'rgba(0, 0, 0, 0.92)',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                          }}
+                        >
+                          {pad(hours)}
+                        </div>
+                        <span className="text-white h3 mx-2" style={{fontWeight: 700, fontSize: '2rem'}}>:</span>
+                        <div
+                          className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                          style={{
+                            width: '40px',
+                            height: '40px',
+                            fontSize: '1.2rem',
+                            background: 'rgba(0, 0, 0, 0.92)',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                          }}
+                        >
+                          {pad(minutes)}
+                        </div>
+                        <span className="text-white h3 mx-2" style={{fontWeight: 700, fontSize: '2rem'}}>:</span>
+                        <div
+                          className="rounded-circle d-flex align-items-center justify-content-center fw-bold shadow"
+                          style={{
+                            width: '40px',
+                            height: '40px',
+                            fontSize: '1.2rem',
+                            background: 'rgba(0, 0, 0, 0.92)',
+                            boxShadow: '0 2px 8px rgba(0,0,0,0.10)'
+                          }}
+                        >
+                          {pad(seconds)}
+                        </div>
                       </div>
                     </div>
-                  </div>
-                );
+                  );
+                }
+
+                return <Countdown />;
+              })()}
+            </div>
+            {/* Array of hot deal cards */}
+            {[
+              {
+                tag: "20%",
+                tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
+                tagClass: "h6 text-light",
+                img: "../src/assets/furniture/arrival-9.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Home carbonated table...",
+                rating: 5,
+                ratingText: "5.0 (32)",
+                price: "$43.20",
+                oldPrice: "$62.32"
+              },
+              {
+                tag: "Free Shipping",
+                tagStyle: { backgroundColor: "blue", paddingInline: "0px", width: "98px", fontSize: "12px" },
+                tagClass: "text-light",
+                img: "../src/assets/furniture/arrival-10.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Bamboo stylish X-chair..",
+                rating: 4,
+                ratingText: "4.0 (32)",
+                price: "$274.20"
+              },
+              {
+                tag: "20%",
+                tagStyle: { backgroundColor: "#e53935", paddingInline: "0px", width: "48px" },
+                tagClass: "h6 text-light",
+                img: "../src/assets/furniture/arrival-11.jpg",
+                imgHeight: "60%",
+                alt: "Home carbonated table",
+                title: "Decorated bend table...",
+                rating: 4,
+                ratingText: "4.0 (72)",
+                price: "$499.20",
+                oldPrice: "$562.00"
+              },
+              {
+                tag: "20%",
+                tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
+                tagClass: "h6 text-light",
+                img: "../src/assets/furniture/arrival-12.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Furistic caple bed...",
+                rating: 5,
+                ratingText: "5.0 (32)",
+                price: "$776.99",
+                oldPrice: "$835.32"
+              },
+              {
+                tag: "Free Shipping",
+                tagStyle: { backgroundColor: "blue", paddingInline: "0px", width: "98px", fontSize: "12px" },
+                tagClass: "text-light",
+                img: "../src/assets/furniture/arrival-13.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Wireless charging sofa...",
+                rating: 3,
+                ratingText: "3.0 (340)",
+                price: "$357.19"
+              },
+              {
+                tag: "20%",
+                tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
+                tagClass: "h6 text-light",
+                img: "../src/assets/furniture/arrival-8.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Home carbonated table...",
+                rating: 5,
+                ratingText: "5.0 (32)",
+                price: "$43.20",
+                oldPrice: "$62.32"
+              },
+              {
+                tag: "Free Shipping",
+                tagStyle: { backgroundColor: "blue", paddingInline: "0px", width: "98px", fontSize: "12px" },
+                tagClass: "text-light",
+                img: "../src/assets/furniture/arrival-7.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Home carbonated table...",
+                rating: 5,
+                ratingText: "5.0 (32)",
+                price: "$43.20",
+                oldPrice: "$62.32"
+              },
+              {
+                tag: "20%",
+                tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
+                tagClass: "h6 text-light",
+                img: "../src/assets/furniture/head-1.jpg",
+                imgHeight: "55%",
+                alt: "Home carbonated table",
+                title: "Home carbonated table...",
+                rating: 5,
+                ratingText: "5.0 (32)",
+                price: "$43.20",
+                oldPrice: "$62.32"
               }
-
-              return <Countdown />;
-            })()}
-          </div>
-          <div style={{width: '200px', height: '300px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-            <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '30px',
-                width: '48px',
-                height: '25px',
-                backgroundColor: '#e53935',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
-              }} 
-              className="h6 text-light"
-            >
-              20%
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-9.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Home carbonated table...</p>
-              <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 6}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>5.0 (32)</span>
+            ].map((item, idx) => (
+              <div
+                key={idx}
+                style={{
+                  width: '200px',
+                  height: item.imgHeight === "60%" ? '270px' : '300px',
+                  marginBottom: '0px',
+                  objectFit: 'cover',
+                  borderRadius: '8px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  boxShadow: '0 2px 8px rgba(0,0,0,0.08)'
+                }}
+              >
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '0px',
+                    right: '0px',
+                    borderRadius: '0 8px 0 8px',
+                    height: '25px',
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    zIndex: 2,
+                    fontWeight: 700,
+                    fontSize: '1rem',
+                    boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
+                    ...item.tagStyle
+                  }}
+                  className={item.tagClass}
+                >
+                  {item.tag}
+                </div>
+                <img
+                  src={item.img}
+                  style={{
+                    width: "100%",
+                    height: item.imgHeight,
+                    objectFit: 'cover',
+                    borderRadius: '6px 6px 6px 6px',
+                  }}
+                  alt={item.alt}
+                />
+                <div className="text-light">
+                  <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>{item.title}</p>
+                  <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
+                    {[...Array(item.rating)].map((_, i) => (
+                      <i key={i} className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
+                    ))}
+                    {item.rating < 5 && item.ratingText.includes('.') && (
+                      <i className="fa fa-star-half-o" style={{color: '#ffb400', marginRight: 6}}></i>
+                    )}
+                    <span style={{fontSize: '0.9rem', color: '#888', marginLeft: 4}}>{item.ratingText}</span>
+                  </div>
+                  <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
+                    <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>{item.price}</h1>
+                    {item.oldPrice && (
+                      <strike style={{color: '#bbb', fontSize: '0.95rem'}}>{item.oldPrice}</strike>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$43.20</h1>
-                <strike style={{color: '#bbb', fontSize: '0.95rem'}}>$62.32</strike>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '300px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-            <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '0px',
-                width: '98px',
-                height: '25px',
-                backgroundColor: 'blue',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
-                fontSize: '12px'
-              }} 
-              className="text-light"
-            >
-              Free Shipping
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-10.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Bamboo stylish X-chair..</p>
-              <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>4.0 (32)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$274.20</h1>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '270px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-            <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '0px',
-                width: '48px',
-                height: '25px',
-                backgroundColor: '#e53935',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
-              }} 
-              className="h6 text-light"
-            >
-              20%
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-11.jpg" 
-              style={{
-                width: "100%",
-                height: "60%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Decorated bend table...</p>
-               <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 6}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>4.0 (72)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$499.20</h1>
-                <strike style={{color: '#bbb', fontSize: '0.95rem'}}>$562.00</strike>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '270px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-            <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '30px',
-                width: '48px',
-                height: '25px',
-                backgroundColor: '#e53935',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
-              }} 
-              className="h6 text-light"
-            >
-              20%
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-12.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Furistic caple bed...</p>
-               <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 6}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>5.0 (32)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$776.99</h1>
-                <strike style={{color: '#bbb', fontSize: '0.95rem'}}>$835.32</strike>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '270px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-          <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '0px',
-                width: '98px',
-                height: '25px',
-                backgroundColor: 'blue',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
-                fontSize: '12px'
-              }} 
-              className="text-light"
-            >
-              Free Shipping
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-13.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Wireless charging sofa...</p>
-               <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>3.0 (340)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$357.19</h1>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '270px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-            <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '30px',
-                width: '48px',
-                height: '25px',
-                backgroundColor: '#e53935',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
-              }} 
-              className="h6 text-light"
-            >
-              20%
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-8.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Home carbonated table...</p>
-               <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 6}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>5.0 (32)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$43.20</h1>
-                <strike style={{color: '#bbb', fontSize: '0.95rem'}}>$62.32</strike>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '270px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-          <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '0px',
-                width: '98px',
-                height: '25px',
-                backgroundColor: 'blue',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)',
-                fontSize: '12px'
-              }} 
-              className="text-light"
-            >
-              Free Shipping
-            </div>
-            <img 
-              src="../src/assets/furniture/arrival-7.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Home carbonated table...</p>
-               <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 6}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>5.0 (32)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$43.20</h1>
-                <strike style={{color: '#bbb', fontSize: '0.95rem'}}>$62.32</strike>
-              </div>
-            </div>
-          </div>
-          <div style={{width: '200px', height: '270px', marginBottom: '0px', objectFit: 'cover', borderRadius: '8px', position: 'relative', overflow: 'hidden', boxShadow: '0 2px 8px rgba(0,0,0,0.08)'}}>
-            <div 
-              style={{
-                position: 'absolute',
-                top: '0px',
-                right: '0px',
-                borderRadius: '0 8px 0 8px',
-                paddingInline: '30px',
-                width: '48px',
-                height: '25px',
-                backgroundColor: '#e53935',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 2,
-                fontWeight: 700,
-                fontSize: '1rem',
-                boxShadow: '0 2px 8px rgba(0,0,0,0.12)'
-              }} 
-              className="h6 text-light"
-            >
-              20%
-            </div>
-            <img 
-              src="../src/assets/furniture/head-1.jpg" 
-              style={{
-                width: "100%",
-                height: "55%",
-                objectFit: 'cover',
-                borderRadius: '6px 6px 6px 6px',
-              }} 
-              alt="Home carbonated table"
-            />
-            <div className="text-light">
-              <p style={{margin: 0, fontWeight: 500, fontSize: '1rem'}}>Home carbonated table...</p>
-               <div style={{display: 'flex', alignItems: 'center', marginBottom: '8px'}}>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 2}}></i>
-                    <i className="fa fa-star" style={{color: '#ffb400', marginRight: 6}}></i>
-                    <span style={{fontSize: '0.9rem', color: '#888'}}>5.0 (32)</span>
-              </div>
-              <div style={{display: 'flex', alignItems: 'center', gap: '8px', marginTop: '1px'}}>
-                <h1 style={{margin: 0, color: '#fff', fontWeight: 700, fontSize: '1.3rem', color: 'red'}}>$43.20</h1>
-                <strike style={{color: '#bbb', fontSize: '0.95rem'}}>$62.32</strike>
-              </div>
-            </div>
-          </div>
-
+            ))}
           </div>
           <div style={{width: "20%", height: '100%', paddingLeft: '20px'}}>
             <VideoAdCard sources={videoSources1} height="220px" />

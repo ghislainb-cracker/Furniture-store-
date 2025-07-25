@@ -1,4 +1,4 @@
-:root{
+:root {
   --background-color: #1e90ff;
   --background-color-light: #44a3ff;
   --background-color-light2: #a9d4fe;
@@ -11,7 +11,7 @@
   --main-color-dark7: #323232a3;
   --main-color-dark8: #323232;
   --main-color-dark9: #424242;
-  
+
   --text-color-dark: #000000;
   --text-color-white: #ffffff;
   --text-color-white2: #bbbbbb;
@@ -19,54 +19,88 @@
   --border-color1: #eeeeee;
   --border-color2: #2e2e2e;
 }
-.bg-logo{
+
+.bg-logo {
   color: var(--background-color-light);
 }
-.bg-color{
+
+.bg-color {
   background-color: var(--main-color-dark) !important;
 }
-.lightblue2{
+
+.lightblue2 {
   background-color: var(--background-color-light2);
 }
-.dark8{
+
+.dark8 {
   background-color: var(--main-color-dark7) !important;
   color: #ffffff !important;
 }
-.dark7{
+
+.dark7 {
   background-color: var(--main-color-dark7);
   color: #ffffff;
 }
-.white2{
+
+.white2 {
   color: var(--text-color-white2);
 }
-.bodering{
+
+.bodering {
   border-radius: 20px !important;
 }
 
-.fs-xs { font-size: 10px; }   
-.fs-sm { font-size: 12px; }
-.fs-md { font-size: 18px; }
-.fs-lg { font-size: 24px; }
-.fs-xl { font-size: 28px; }
-.fs-2xl { font-size: 32px; }
-.fs-3xl { font-size: 48px; }
-.fs-4xl {font-size: 64px;}
+.fs-xs {
+  font-size: 10px;
+}
+
+.fs-sm {
+  font-size: 12px;
+}
+
+.fs-md {
+  font-size: 18px;
+}
+
+.fs-lg {
+  font-size: 24px;
+}
+
+.fs-xl {
+  font-size: 28px;
+}
+
+.fs-2xl {
+  font-size: 32px;
+}
+
+.fs-3xl {
+  font-size: 48px;
+}
+
+.fs-4xl {
+  font-size: 64px;
+}
 
 .bodies {
   font-family: "Times New Roman", Times, serif;
 }
+
 .raised-section {
   margin-top: -50px;
 }
+
 .custom-placeholder::placeholder {
   color: #ffffff !important;
   opacity: 1 !important;
 }
-.cat-opacity:hover{
+
+.cat-opacity:hover {
   opacity: 0.8;
   cursor: pointer;
 }
-.cat-opacity2:hover{
+
+.cat-opacity2:hover {
   border: 1px solid #ffffff !important;
 }
 
@@ -88,170 +122,230 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d2691e;
 }
-.flex{
+
+.flex {
   display: flex;
 }
-.a-third{
+
+.a-third {
   height: 100%;
   width: 25%;
   /* background-color: #1e90ff; */
 }
-.a-seventh{
+
+.a-seventh {
   height: 100%;
   width: 67%;
   /* background-color: #44a3ff; */
 }
-.percent55{
+
+.percent55 {
   height: 100%;
   width: 55%;
 }
-.percent45{
+
+.percent45 {
   height: 100%;
   width: 45%;
 }
-.all-flex{
+
+.all-flex {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.half-flex{
+
+.half-flex {
   display: flex;
   align-items: center;
 }
-.half-flex2{
+
+.half-flex2 {
   display: flex;
   justify-content: center;
 }
-.all-flex2{
+
+.all-flex2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-.radius20{
+
+.radius20 {
   border-radius: 20px !important;
 }
-.shadow1{
+
+.shadow1 {
   box-shadow: 0 6px 20px rgba(116, 175, 238, 0.2) !important;
 }
-.griddng3{
+
+.bundle-btn {
+  transition: transform 0.1s ease-in-out;
+}
+.bundle-btn:hover {
+  transform: scale(1.02);
+}
+.griddng3 {
   display: grid;
   grid-template: auto auto/ repeat(3, 1fr);
   gap: 24px;
 }
-.griddng2{
+
+.griddng2 {
   display: grid;
   grid-template: auto auto/ repeat(2, 1fr);
   gap: 24px;
 }
-.dark-img{
+
+.dark-img {
   filter: brightness(60%);
 }
-.textShadow{
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.9);
+
+.textShadow {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
 }
-.paddingLeft30{
+
+.paddingLeft30 {
   padding-left: 30px !important;
 }
-.white-border{
+
+.white-border {
   border: 1px solid #ffffff !important;
 }
-.centering{
+
+.centering {
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
   text-align: center !important;
 }
-.columning{
+
+.columning {
   display: flex !important;
   flex-direction: column !important;
   justify-content: center !important;
   align-items: center !important;
 }
-.star-size{
+
+.star-size {
   width: 20px !important;
   color: white;
 }
-.btn-hover{
+
+.btn-hover {
   transform: scale(1);
   transition: transform 0.4s ease;
 }
-.btn-hover:hover{ 
+
+.btn-hover:hover {
   transform: scale(0.99);
 }
-.logo-text{
+
+.logo-text {
   -webkit-text-stroke: var(--border-color1) 1px;
   color: transparent !important;
   font-weight: bold;
 }
+
 .gradient-bg-animated {
   background: linear-gradient(270deg, #c2e9fb, #a1c4fd, #c2e9fb);
   background-size: 400% 400%;
   animation: gradientBGMove 6s ease-in-out infinite;
 }
+
 @keyframes gradientBGMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
+
 @keyframes move {
-  0%{
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+
+  100% {
     transform: rotate(360deg);
   }
 }
+
 @keyframes zoom {
-  0%{
+  0% {
     transform: scale(1);
   }
-  50%{
+
+  50% {
     transform: scale(1.1);
   }
-  100%{
+
+  100% {
     transform: scale(1);
   }
 }
+
 .clamp {
   display: -webkit-box;
-  -webkit-line-clamp: 2;     /* Limit to 2 lines */
+  -webkit-line-clamp: 2;
+  /* Limit to 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .clamp1 {
   display: -webkit-box;
-  -webkit-line-clamp: 1;     /* Limit to 2 lines */
+  -webkit-line-clamp: 1;
+  /* Limit to 2 lines */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-  @keyframes scrollTestimonials {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+
+@keyframes scrollTestimonials {
+  0% {
+    transform: translateX(0);
   }
-  .customer-testimonials-slider .testimonials-track {
-      /* The width is 2x the number of cards for seamless loop */
-      width: max-content;
+
+  100% {
+    transform: translateX(-50%);
   }
-  @media (max-width: 600px) {
-      .testimonial-card {
-          min-width: 90vw !important;
-          max-width: 95vw !important;
-          padding: 18px 8px 16px 8px !important;
-      }
+}
+
+.customer-testimonials-slider .testimonials-track {
+  /* The width is 2x the number of cards for seamless loop */
+  width: max-content;
+}
+
+@media (max-width: 600px) {
+  .testimonial-card {
+    min-width: 90vw !important;
+    max-width: 95vw !important;
+    padding: 18px 8px 16px 8px !important;
   }
-  .cart-icon-overlay:hover{
-    transform: scale(1.1);
-    transition: transform 4s ease-in-out;
-  }
-  .hide-scrollbar {
-    scrollbar-width: none;
-  }
-  .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .hotdeal-product-card {
-    transition: box-shadow 0.3s, transform 0.3s;
-  }
+}
+
+.cart-icon-overlay:hover {
+  transform: scale(1.1);
+  transition: transform 4s ease-in-out;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hotdeal-product-card {
+  transition: box-shadow 0.3s, transform 0.3s;
+}

@@ -55,10 +55,18 @@ const CartPage = () => {
   const total = subtotal + shipping + tax;
 
   return (
-    <div className="container my-5 ">
-      <h2 className="mb-4 fw-bold text-light">
-        <i className="fa fa-shopping-cart me-2"></i>Your Shopping Cart
-      </h2>
+    <div className="p-4 my-1 ">
+      <div
+        className="w-full rounded-4 px-4 py-3 mb-3 d-flex align-items-center"
+        style={{
+          background: '#2A7B9B',
+          background: 'linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%)'
+        }}
+      >
+        <h2 className="fw-bold text-light">
+          <i className="fa fa-shopping-cart me-2"></i>Your Shopping Cart
+        </h2>
+      </div>
       {cartItems.length === 0 ? (
         <div className="text-center py-5">
           <img
@@ -75,9 +83,9 @@ const CartPage = () => {
         <div className="row">
           {/* Cart Items */}
           <div className="col-lg-8">
-            <div className="table-responsive shadow rounded bg-white">
+            <div className="table-responsive table-dark shadow rounded bg-black">
               <table className="table align-middle mb-0">
-                <thead className="bg-light">
+                <thead className="bg-black">
                   <tr>
                     <th style={{ minWidth: 120 }}>Product</th>
                     <th>Details</th>
@@ -95,11 +103,10 @@ const CartPage = () => {
                           src={item.img}
                           alt={item.title}
                           style={{
-                            width: 80,
-                            height: 80,
+                            width: 100,
+                            height: 100,
                             objectFit: "cover",
                             borderRadius: 8,
-                            border: "1px solid #eee",
                           }}
                         />
                       </td>
@@ -169,9 +176,9 @@ const CartPage = () => {
                       </td>
                       <td className="text-center">
                         <button
-                          className="btn btn-outline-danger btn-sm"
+                          className="btn btn-outline-danger btn-md"
                           onClick={() => removeFromCart(item.cartItemId)}
-                          title="Remove"
+                          title="Remove from cart"
                         >
                           <i className="fa fa-trash"></i>
                         </button>
@@ -182,7 +189,9 @@ const CartPage = () => {
               </table>
             </div>
             <Link to="/" className="btn btn-link mt-3">
-              <i className="fa fa-arrow-left me-2"></i>Continue Shopping
+              <button className="btn btn-lg btn-primary">
+                <i className="fa fa-arrow-left me-2"></i>Continue Shopping
+              </button>
             </Link>
           </div>
           {/* Cart Summary */}
@@ -216,9 +225,9 @@ const CartPage = () => {
                   </span>
                 </div>
                 <Link to="/checkout">
-                <button className="btn btn-success w-100 py-2 fw-bold" disabled>
-                  Proceed to Checkout
-                </button>
+                  <button className="btn btn-success w-100 py-2 fw-bold" disabled>
+                    Proceed to Checkout
+                  </button>
                 </Link>
                 <div className="text-muted mt-2" style={{ fontSize: 13 }}>
                   <i className="fa fa-lock me-1"></i>

@@ -34,7 +34,7 @@ export default function Home(props) {
       <Header/>
       
    {/* show case */}
-<section className="text-light mt-2 text-center text-sm-start raised-section" data-aos="fade-up">
+<section className="text-light mt-2 mb-5 text-center text-sm-start raised-section" data-aos="fade-up">
   <div className="container">
     <div className="row align-items-center">
       {/* Content Column - Fixed width */}

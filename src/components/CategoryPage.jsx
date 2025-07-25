@@ -31,17 +31,15 @@ const CategoryPage = () => {
   }
 
   return (
-    <div className="container my-5">
+    <div className="text-light">
       {/* Category Banner */}
-      <div className="rounded-4 p-4 mb-4 d-flex align-items-center justify-content-between category-banner" style={{ background: "linear-gradient(90deg, #232526 60%, #414345 100%)", color: "#fff", minHeight: 120 }}>
+      <div className=" p-2 mb-4 d-flex align-items-center justify-content-between category-banner" style={{ borderRadius: '20px 20px 0 0', background: 'linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%)', color: "#fff", minHeight: 70 }}>
         <div>
-          <h2 className="mb-1 text-capitalize fw-bold" style={{ fontSize: "2.2rem" }}>🪑 {categoryName} Collection</h2>
-          <div className="d-flex align-items-center gap-3 mt-2">
-            <span className="badge bg-primary fs-6 px-3 py-2">{filteredProducts.length} Products</span>
-            <span className="text-light-50 small">Find the best {categoryName} for your space!</span>
+          <div className="d-flex align-items-center gap-3">
+            <h3>Discover {categoryName}</h3>
           </div>
         </div>
-        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Category" style={{ width: 80, opacity: 0.7 }} />
+        <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Category" style={{ width: 50, opacity: 0.7 }} />
       </div>
 
       {/* Controls */}
@@ -86,7 +84,7 @@ const CategoryPage = () => {
           <Link to="/" className="btn btn-primary mt-3">Continue Shopping</Link>
         </div>
       ) : (
-        <div className={view === "grid" ? "row g-4" : "list-group list-group-flush"}>
+        <div className={view === "grid" ? "row g-4 p-4" : "list-group list-group-flush"}>
           {filteredProducts.map((product, index) => {
             const isWishlisted = wishlistItems.some(item => item.id === product.id);
             return view === "grid" ? (
@@ -94,7 +92,7 @@ const CategoryPage = () => {
                 <div className="card h-100 shadow-sm border-0 product-card position-relative">
                   {/* Badge */}
                   {product.isFavorite && <span className="badge bg-danger position-absolute top-0 start-0 m-2">Hot</span>}
-                  <div className="position-relative bg-light d-flex align-items-center justify-content-center" style={{ height: 220 }}>
+                  <div className="position-relative bg-dark d-flex align-items-center justify-content-center" style={{ height: 220 }}>
                     <img src={product.img} alt={product.title} className="p-3 object-fit-contain" style={{ maxHeight: 180, maxWidth: "100%" }} />
                     <button
                       type="button"
@@ -142,8 +140,15 @@ const CategoryPage = () => {
               </div>
             );
           })}
+          <Link>
+            <button className="btn btn-lg btn-primary">
+              <i className="fa fa-chevron-left me-2"></i>Back to Home
+            </button>
+          </Link>
         </div>
+
       )}
+
     </div>
   );
 };
