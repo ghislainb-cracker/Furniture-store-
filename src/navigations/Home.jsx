@@ -37,7 +37,7 @@ export default function Home(props) {
 <section className="text-light mt-2 mb-5 text-center text-sm-start raised-section" data-aos="fade-up">
   <div className="container">
     <div className="row align-items-center">
-      {/* Content Column - Fixed width */}
+
       <div className="col-12 col-sm-6">
         <h1 className='fs-3xl' id="animated-text">Discover top quality furniture for your home decor need</h1>
         <p className='fs-md white2'>Browse by category or explore our latest collections</p>
@@ -61,7 +61,7 @@ export default function Home(props) {
         </div>
       </div>
       
-      {/* Image Column - Fixed width with reserved space */}
+
       <div className="col-12 col-sm-6 d-none d-sm-block">
         <div className="image-container" style={{minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <img 
@@ -112,7 +112,7 @@ export default function Home(props) {
               </ul>
             </div>
             <div className="col-md-6 col-lg-3">
-              <h5 className='mb-3'>Amazon payment products</h5>
+              <h5 className='mb-3'>Fun furniture payment products</h5>
               <ul className="list-unstyled lh-lg">
                 <li>Fun Furniture Rewards Visa Signature Cards</li>
                 <li>Fun Furniture Store Card</li>
@@ -124,7 +124,7 @@ export default function Home(props) {
             <div className="col-md-6 col-lg-3">
               <h5 className='mb-3'>Let us help you</h5>
               <ul className="list-unstyled lh-lg">
-                <li>Fun Furniture and COVID-19</li>
+                <li>Fun Furniture and creativity</li>
                 <li>Your Account</li>
                 <li>Your Orders</li>
                 <li>Shipping Rates & Policies</li>
@@ -145,7 +145,10 @@ export default function Home(props) {
               <span>Discord</span>
             </div>
             <div>
-              <p className="mb-0">&copy;Funstore 2025</p>
+              <p className="mb-0">&copy;Funstore 2025 </p>
+            </div>
+            <div>
+              <p>Powered by Ghislain-soft-innovation</p>
             </div>
           </div>
         </div>

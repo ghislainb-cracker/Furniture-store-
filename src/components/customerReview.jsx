@@ -118,7 +118,7 @@ export default function CustomerReview(){
                             </div>
                         </div>
                     ))}
-                    {/* Duplicate for seamless infinite scroll */}
+                    
                     {[
                         {
                             name: "Sarah M.",

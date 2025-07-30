@@ -29,13 +29,13 @@ const ProductPage = () => {
     </div>
   );
 
-  // Product color options
+  
   const colors = ["Black", "White", "Gray", "Brown"];
   
-  // Product size options
+  
   const sizes = ["S", "M", "L", "XL"];
   
-  // Image gallery
+
   const images = [
     product.img,
     "../src/assets/furniture/6.png",

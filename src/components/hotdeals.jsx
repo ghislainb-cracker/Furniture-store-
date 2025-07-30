@@ -3,13 +3,13 @@ import React, { useRef, useState } from "react";
 const videoSources1 = [
   "../src/assets/furniture/one.mp4",
   "../src/assets/furniture/one.mp4"
-  // Add more video paths as needed
+  
 ];
 
 const videoSources2 = [
   "../src/assets/furniture/fun_video.mp4",
   "../src/assets/furniture/fun_video.mp4"
-  // Add more video paths as needed
+  
 ];
 
 function VideoAdCard({ sources, height = "200px" }) {
@@ -62,9 +62,7 @@ export default function HotDeals(){
     <>
      <section>
       <div className="d-block mt-5">
-        {/*
-          Refactored: All hardcoded images/cards are now in an array and iterated over.
-        */}
+       
         <div style={{height: "100%", width: '100%', display: "flex", padding: '10px'}}>
           <div style={{width: "80%", display: "grid", gridTemplate: 'auto auto/ repeat(5, 1fr)', gap: 5}}>
             <div style={{gridColumn: 'span 2', marginBottom: '0px', display: 'block', paddingInline: '5px', color: '#ffffff'}}>
@@ -125,7 +123,7 @@ export default function HotDeals(){
                 <h2 style={{letterSpacing: '3px'}}><span className="text-danger">HOT </span> Deals</h2>
               </div>
               {(() => {
-                // Set the offer end time (e.g., 2 days from now)
+               
                 const offerEnd = new Date();
                 offerEnd.setDate(offerEnd.getDate() + 2);
                 offerEnd.setHours(23, 59, 59, 999);
@@ -152,7 +150,7 @@ export default function HotDeals(){
                     return () => clearInterval(interval);
                   }, [timeLeft]);
 
-                  // Calculate days, hours, minutes, seconds
+                  
                   const totalSeconds = Math.floor(timeLeft / 1000);
                   const days = Math.floor(totalSeconds / (3600 * 24));
                   const hours = Math.floor((totalSeconds % (3600 * 24)) / 3600);
@@ -170,7 +168,7 @@ export default function HotDeals(){
                         border: '1px solid linear-gradient(270deg, #456738, #8a8493, #958694)'
                       }}
                     >
-                      {/* Decorative vector icons in the background */}
+                      
                       <svg
                         width="80"
                         height="80"
@@ -269,7 +267,7 @@ export default function HotDeals(){
                 return <Countdown />;
               })()}
             </div>
-            {/* Array of hot deal cards */}
+            
             {[
               {
                 tag: "20%",
@@ -444,13 +442,7 @@ export default function HotDeals(){
           </div>
         </div>
         <div style={{height: "100%", width: '100%', display: "flex", padding: '10px', margin: '0px 0 0 0'}}>
-          {/* 
-            To use flex instead of grid and maintain the design:
-            - Use a flex container with flexWrap: 'wrap' to allow items to wrap to the next line.
-            - For the section title, use a full-width flex-basis: '100%' or width: '100%' so it spans all columns.
-            - For the image cards, set a fixed width (e.g., 170px) and margin for spacing.
-            - Use gap or margin for spacing between items.
-          */}
+         
           <div style={{
             width: "70%",
             display: "flex",
@@ -471,13 +463,9 @@ export default function HotDeals(){
             >
               Swimming pool &amp; Garden
             </div>
-          {/*
-            To avoid violating the Rules of Hooks, move all hooks to the top level.
-            We define ProductImageScroller as an inner component of HotDeals.
-          */}
-          {/* Improved horizontal image scroller with left/right buttons and better usability */}
+         
           {(() => {
-            // Instead of just image paths, use product objects for richer info
+            
             const productData = [
               {
                 src: "../src/assets/furniture/head-2.jpg",
@@ -558,7 +546,7 @@ export default function HotDeals(){
             const [canScrollRight, setCanScrollRight] = React.useState(true);
             const [hoveredIdx, setHoveredIdx] = React.useState(null);
 
-            // Update scroll button states
+            
             const updateScrollButtons = () => {
               const el = scrollRef.current;
               if (!el) return;
@@ -589,7 +577,7 @@ export default function HotDeals(){
               });
             };
 
-            // Helper for stars
+            
             const renderStars = (rating) => (
               <div style={{display: 'flex', gap: '2px'}}>
                 {[...Array(5)].map((_, i) => (
@@ -605,7 +593,7 @@ export default function HotDeals(){
 
             return (
               <div style={{ position: 'relative', width: '100%', minHeight: 130 }}>
-                {/* Left chevron */}
+                
                 <button
                   onClick={() => handleScroll(-1)}
                   disabled={!canScrollLeft}
@@ -633,7 +621,7 @@ export default function HotDeals(){
                     <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
-                {/* Image scroller */}
+               
                 <div
                   ref={scrollRef}
                   style={{
@@ -670,7 +658,7 @@ export default function HotDeals(){
                       onMouseEnter={() => setHoveredIdx(idx)}
                       onMouseLeave={() => setHoveredIdx(null)}
                     >
-                      {/* Tag badge */}
+                      
                       <div style={{
                         position: 'absolute',
                         top: 0,
@@ -686,7 +674,7 @@ export default function HotDeals(){
                       }}>
                         {prod.tag}
                       </div>
-                      {/* Product image */}
+                      
                       <img
                         src={prod.src}
                         style={{
@@ -700,7 +688,7 @@ export default function HotDeals(){
                         alt={prod.name}
                         draggable={false}
                       />
-                      {/* Overlay info on hover */}
+                      
                       <div
                         style={{
                           position: 'absolute',
@@ -741,7 +729,7 @@ export default function HotDeals(){
                           }}
                           onMouseDown={e => e.preventDefault()}
                           onClick={() => {
-                            // Add to cart logic here
+                            
                             alert(`Added "${prod.name}" to cart!`);
                           }}
                           aria-label={`Add ${prod.name} to cart`}
@@ -749,18 +737,9 @@ export default function HotDeals(){
                         >
                           <i className="fa fa-shopping-cart"></i>
                         </button>
-                        {/* <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
-                          {prod.desc}
-                        </div> */}
-                        {/* <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
-                          <span style={{fontWeight: 700, color: '#ffd700', fontSize: '1.1rem'}}>
-                            ${prod.price.toFixed(2)}
-                          </span>
-                          <strike style={{color: '#bbb', fontSize: '0.95rem'}}>${prod.oldPrice.toFixed(2)}</strike>
-                        </div> */}
-                        {/* {renderStars(prod.rating)} */}
+                       
                       </div>
-                      {/* Always show name and price at bottom left, but less prominent */}
+                     
                       <div style={{
                         position: 'absolute',
                         left: 0,
@@ -780,7 +759,7 @@ export default function HotDeals(){
                     </div>
                   ))}
                 </div>
-                {/* Right chevron */}
+              
                 <button
                   onClick={() => handleScroll(1)}
                   disabled={!canScrollRight}
@@ -808,7 +787,7 @@ export default function HotDeals(){
                     <path d="M9 6l6 6-6 6" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
-                {/* Hide scrollbar with CSS */}
+               
                 <style>
                   {`
                     .hide-scrollbar {
@@ -825,9 +804,9 @@ export default function HotDeals(){
               </div>
             );
           })()}
-          {/* Improved horizontal image scroller with left/right buttons and better usability */}
+          
           {(() => {
-            // Instead of just image paths, use product objects for richer info
+            
             const productData = [
               {
                 src: "../src/assets/furniture/head-2.jpg",
@@ -908,7 +887,7 @@ export default function HotDeals(){
             const [canScrollRight, setCanScrollRight] = React.useState(true);
             const [hoveredIdx, setHoveredIdx] = React.useState(null);
 
-            // Update scroll button states
+            
             const updateScrollButtons = () => {
               const el = scrollRef.current;
               if (!el) return;
@@ -939,7 +918,7 @@ export default function HotDeals(){
               });
             };
 
-            // Helper for stars
+            
             const renderStars = (rating) => (
               <div style={{display: 'flex', gap: '2px'}}>
                 {[...Array(5)].map((_, i) => (
@@ -955,7 +934,7 @@ export default function HotDeals(){
 
             return (
               <div style={{ position: 'relative', width: '100%', minHeight: 130 }}>
-                {/* Left chevron */}
+                
                 <button
                   onClick={() => handleScroll(-1)}
                   disabled={!canScrollLeft}
@@ -983,7 +962,7 @@ export default function HotDeals(){
                     <path d="M15 6l-6 6 6 6" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </button>
-                {/* Image scroller */}
+                
                 <div
                   ref={scrollRef}
                   style={{
@@ -1020,7 +999,7 @@ export default function HotDeals(){
                       onMouseEnter={() => setHoveredIdx(idx)}
                       onMouseLeave={() => setHoveredIdx(null)}
                     >
-                      {/* Tag badge */}
+                      
                       <div style={{
                         position: 'absolute',
                         top: 0,
@@ -1036,7 +1015,7 @@ export default function HotDeals(){
                       }}>
                         {prod.tag}
                       </div>
-                      {/* Product image */}
+                      
                       <img
                         src={prod.src}
                         style={{
@@ -1050,7 +1029,7 @@ export default function HotDeals(){
                         alt={prod.name}
                         draggable={false}
                       />
-                      {/* Overlay info on hover */}
+                      
                       <div
                         style={{
                           position: 'absolute',
@@ -1091,7 +1070,7 @@ export default function HotDeals(){
                           }}
                           onMouseDown={e => e.preventDefault()}
                           onClick={() => {
-                            // Add to cart logic here
+                            
                             alert(`Added "${prod.name}" to cart!`);
                           }}
                           aria-label={`Add ${prod.name} to cart`}
@@ -1099,18 +1078,9 @@ export default function HotDeals(){
                         >
                           <i className="fa fa-shopping-cart"></i>
                         </button>
-                        {/* <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
-                          {prod.desc}
-                        </div> */}
-                        {/* <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
-                          <span style={{fontWeight: 700, color: '#ffd700', fontSize: '1.1rem'}}>
-                            ${prod.price.toFixed(2)}
-                          </span>
-                          <strike style={{color: '#bbb', fontSize: '0.95rem'}}>${prod.oldPrice.toFixed(2)}</strike>
-                        </div> */}
-                        {/* {renderStars(prod.rating)} */}
+                       
                       </div>
-                      {/* Always show name and price at bottom left, but less prominent */}
+                      
                       <div style={{
                         position: 'absolute',
                         left: 0,
@@ -1130,7 +1100,7 @@ export default function HotDeals(){
                     </div>
                   ))}
                 </div>
-                {/* Right chevron */}
+                
                 <button
                   onClick={() => handleScroll(1)}
                   disabled={!canScrollRight}
@@ -1163,12 +1133,11 @@ export default function HotDeals(){
           })()}
           </div>
           <div style={{width: "30%", height: '100%', paddingLeft: '10px'}}>
-          {/* Dynamic Furniture Image Carousel */}
-          {/* FurnitureCarousel is not defined, so let's implement a simple version here */}
+         
           <div style={{width: "100%", height: '50%', marginBottom: '10px', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', position: 'relative', overflow: 'hidden', borderRadius: '10px', opacity: 0.5}}>
-            {/* Simple Furniture Carousel Implementation */}
+            
             {(() => {
-              // Use import instead of require, and reference images as relative URLs for the browser
+              
               const images = [
                 "/src/assets/furniture/head-2.jpg",
                 "/src/assets/furniture/head-3.jpg",

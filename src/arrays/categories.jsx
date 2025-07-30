@@ -5,8 +5,8 @@ export default
     { id: 3, icon: 'fa-table', description: 'Table' },
     { id: 4, icon: 'fa-bed', description: 'Bed' },
     { id: 5, icon: 'fa-desktop', description: 'Desk' },
-    { id: 6, icon: 'fa-chess-bishop', description: 'Bench' }, // alternative
-    { id: 7, icon: 'fa-cube', description: 'Stool' }, // alternative
+    { id: 6, icon: 'fa-chess-bishop', description: 'Bench' },
+    { id: 7, icon: 'fa-cube', description: 'Stool' },
     { id: 8, icon: 'fa-layer-group', description: 'Shelf' },
     { id: 9, icon: 'fa-couch', description: 'Couch' },
     { id: 10, icon: 'fa-box', description: 'Cabinets' },
@@ -14,7 +14,7 @@ export default
     { id: 12, icon: 'fa-warehouse', description: 'Wardrobe' },
     { id: 13, icon: 'fa-draw-polygon', description: 'Dresser' },
     { id: 14, icon: 'fa-door-closed', description: 'Closet' },
-    { id: 15, icon: 'fa-square', description: 'Mirror' }, // alternative
+    { id: 15, icon: 'fa-square', description: 'Mirror' },
     { id: 16, icon: 'fa-boxes', description: 'Drawer' },
     { id: 17, icon: 'fa-tv', description: 'TV Unit' },
     { id: 18, icon: 'fa-stop', description: 'Stand' },

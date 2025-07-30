@@ -13,7 +13,7 @@ export default function Header(){
     const scrollCategories = () => {
         if (categoriesRef.current) {
             categoriesRef.current.scrollBy({
-                left: 300, // Scroll 200px to the right
+                left: 300,
                 behavior: 'smooth'
             });
         }
@@ -100,8 +100,8 @@ export default function Header(){
                 ref={categoriesRef}
                 style={{
                   overflowX: 'auto',
-                  scrollbarWidth: 'none', // Firefox
-                  msOverflowStyle: 'none', // IE/Edge
+                  scrollbarWidth: 'none', 
+                  msOverflowStyle: 'none', 
                   whiteSpace: 'nowrap'
                 }}
               >

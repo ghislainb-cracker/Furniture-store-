@@ -6,11 +6,11 @@ export default function Living(){
     
     return(
         <>
-         {/* Header */}
+        
          <Header/>
           
            <section  style={{ minHeight: '90vh' }} className="text-light p-5 text-center text-sm-start  position-relative overflow-hidden" id="first-section">
-            {/* Background Video */}
+            
             <video
                 autoPlay
                 loop
@@ -22,12 +22,12 @@ export default function Living(){
                 <source src="../src/assets/furniture/living-background.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-            {/* Dark Overlay */}
+           
             <div
                 className="position-absolute top-0 start-0 w-100 h-100"
                 style={{background: 'rgba(0,0,0,0.5)', zIndex: 1}}
             ></div>
-            {/* Content */}
+            
             <div className="container position-relative hero-content" style={{zIndex: 2}}>
                 <div className="row m-0 p-0">
                     <div className="col-lg-8">
@@ -90,7 +90,7 @@ export default function Living(){
                 </div>
             </div>
         </section> 
-         {/* Sub-category */}
+        
          <section className="mt-5">
             <div className=" m-3 p-3 rounded-5 flex justify-content-between" id ="sub-category2">
                 <div className="text-center rounded-circle border px-5 py-4 text-light">
@@ -129,7 +129,7 @@ export default function Living(){
             </div>
          </section>
          
-        {/* Featured Products */}
+       
                  <section className="flex justify-content-center">
                     <div className="a-third h-4">
                         <h4 className="text-light mb-4">Shop Top Categories</h4>
@@ -211,7 +211,7 @@ export default function Living(){
                                 </div>
                                 <div className="lightblue2 flex justify-content-between align-items-center position-relative" style={{opacity: 0.5}}>
                                     <img src="../src/assets/furniture/arrival-7.jpg" alt="" style={{width: '157px'}} />
-                                    {/* Center the icon using flex utilities and absolute positioning */}
+                                   
                                     <div 
                                         className="bg-danger rounded-circle d-flex justify-content-center align-items-center position-absolute"
                                         style={{
@@ -251,10 +251,6 @@ export default function Living(){
                                 <h5>Luxury Sofa Sets</h5>
                                 <div className="flex gap-3">
                                 <p>The best curved wood furniture for best home decor</p>
-                                {/* <p 
-                                className="bg-secondary rounded-3 h-2 flex align-items-center justify-content-center"
-                                style={{width: '70px', height: '30px'}}
-                                >38% off</p> */}
                         </div>
                         <p className="fw-bold">from: <strike>$113</strike>/ To: $895</p>
                     </div>
@@ -303,10 +299,7 @@ export default function Living(){
                         <h5>Luxury Sofa Sets</h5>
                         <div className="flex gap-3">
                         <p>The best curved wood furniture for best home decor</p>
-                        {/* <p 
-                        className="bg-secondary rounded-3 h-2 flex align-items-center justify-content-center"
-                        style={{width: '70px', height: '30px'}}
-                        >38% off</p> */}
+                    
                         </div>
                         <p className="fw-bold">from: <strike>$113</strike>/ To: $895</p>
                     </div>
@@ -434,7 +427,7 @@ export default function Living(){
             </div>
             </div>
          </section>
-         {/* Bamboo fun section */}
+        
          < Bamboo />                      
             
 

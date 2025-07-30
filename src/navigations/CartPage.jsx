@@ -20,13 +20,14 @@ const CartPage = () => {
     }, {})
   );
 
-  // Update quantities if cartItems change (e.g. after remove)
+  // Update quantities if cartItems change (like when after removing the product)
   React.useEffect(() => {
     setQuantities((prev) => {
       const newQuantities = { ...prev };
       cartItems.forEach((item) => {
         if (!newQuantities[item.cartItemId]) newQuantities[item.cartItemId] = 1;
       });
+     
       // Remove quantities for items no longer in cart
       Object.keys(newQuantities).forEach((id) => {
         if (!cartItems.find((item) => item.cartItemId === id)) {
@@ -140,7 +141,7 @@ const CartPage = () => {
                           </button>
                           <input
                             type="number"
-                            min="1"
+                            min="2"
                             className="form-control mx-2 text-center"
                             style={{ width: 50 }}
                             value={quantities[item.cartItemId] || 1}

@@ -21,7 +21,7 @@ const CategoryPage = () => {
     .map((product, idx) => ({ ...product, id: `wholeproducts_${idx}` }))
     .filter((product) => product.category.toLowerCase() === categoryName.toLowerCase());
 
-  // Sorting logic
+  
   if (sortBy === "price-asc") {
     filteredProducts = filteredProducts.slice().sort((a, b) => parseFloat(a.price.replace(/[^\d.]/g, '')) - parseFloat(b.price.replace(/[^\d.]/g, '')));
   } else if (sortBy === "price-desc") {
@@ -32,7 +32,7 @@ const CategoryPage = () => {
 
   return (
     <div className="text-light">
-      {/* Category Banner */}
+      
       <div className=" p-2 mb-4 d-flex align-items-center justify-content-between category-banner" style={{ borderRadius: '20px 20px 0 0', background: 'linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%)', color: "#fff", minHeight: 70 }}>
         <div>
           <div className="d-flex align-items-center gap-3">
@@ -42,7 +42,7 @@ const CategoryPage = () => {
         <img src="https://cdn-icons-png.flaticon.com/512/190/190411.png" alt="Category" style={{ width: 50, opacity: 0.7 }} />
       </div>
 
-      {/* Controls */}
+      
       <div className="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
         <div className="d-flex align-items-center gap-2">
           <label htmlFor="sortBy" className="fw-bold me-2 mb-0">Sort by:</label>
@@ -76,7 +76,7 @@ const CategoryPage = () => {
         </div>
       </div>
 
-      {/* Product List */}
+      
       {filteredProducts.length === 0 ? (
         <div className="d-flex flex-column align-items-center justify-content-center py-5">
           <img src="https://cdn-icons-png.flaticon.com/512/4076/4076549.png" alt="Empty" style={{ width: 120, opacity: 0.5 }} />
