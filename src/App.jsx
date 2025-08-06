@@ -8,6 +8,7 @@ import CategoryPage from "./components/CategoryPage";
 import { CartProvider } from "./context/CartContext";
 import CheckoutPage from "./components/CheckoutPage";
 import { WishlistProvider } from "./context/WishlistContext";
+import { SignUp } from "./navigations/SignUp";
 
 
 export default function App(){
@@ -17,6 +18,7 @@ export default function App(){
     <Router>
       <Routes>
         <Route path="/" element={<Home/>}/>
+        <Route path="/signup" element={<SignUp/>} />
         <Route path="/living" element={<Living/>}/>
         <Route path="/cart" element={<CartPage/>}/>
         <Route path="checkout" element={<CheckoutPage/>}/>
