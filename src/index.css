@@ -359,6 +359,13 @@
   justify-content: center;
   align-items: center;
 }
+.login-form{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .brand-wrapper2{
   display: flex;
   justify-content: center;
@@ -376,6 +383,47 @@
   flex-direction: column;
   justify-content: center;
 }
+.login-form-real{
+  height: 400px;
+  width: 75%;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+.login-form-real > input{
+  height: 50px;
+  border: 2px solid #000000;
+  margin-bottom: 30px;
+  border-radius: 25px;
+  padding-inline: 20px;
+}
+.login-form-real > button {
+  padding-block: 10px;
+  color: #ffffff;
+  width: 150px;
+  border-radius: 25px;
+  border: none;
+  align-self: center;
+  font-size: 20px;
+  background-color: #000000;
+}
+.login-form-real > p{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 9px;
+}
+.login-form-real > p > a{
+  text-decoration: none;
+}
+
+
+
 .signup-form-real > input{
   height: 50px;
   border: 2px solid #000000;

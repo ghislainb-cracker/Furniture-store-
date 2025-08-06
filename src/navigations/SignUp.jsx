@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Header from "../components/header";
+import { Link } from "react-router-dom";
 
 export const SignUp = () => {
     const [username, setUsername] = useState("");
@@ -35,7 +36,11 @@ export const SignUp = () => {
                         <input type="text" name="" id="" placeholder="Password"/>
 
                         <button>Sign Up</button>
-                        <p>Already have an account? <a href="">Login</a></p>
+                        <p>Already have an account? 
+                            <Link to='/login' className="text-decoration-none">
+                            <a href="">Login</a>
+                            </Link>
+                        </p>
                     </form>
                 </div>
             </div>
