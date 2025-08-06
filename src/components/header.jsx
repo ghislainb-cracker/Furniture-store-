@@ -37,7 +37,7 @@ export default function Header(){
               <div className="collapse navbar-collapse ms-2" id="navbar">
                 <ul className="navbar-nav nav-links">
                     <li className="nav-item">
-                        <a href="/living" className="nav-link text-light fw-bold">Home</a>
+                        <a href="/" className="nav-link text-light fw-bold">Home</a>
                     </li>
                     <li className="nav-item">
                         <a href="/" className="nav-link text-light fw-bold">orders</a>
