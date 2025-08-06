@@ -28,9 +28,9 @@ export const Login = () => {
 
                         <h2 className="text-2xl font-bold mb-4 text-center">Login</h2>
                       
-                        <input type="text" name="" id="" placeholder="Username or Email"/>
+                        <input type="text" name="email" id="" placeholder="Username or Email" value={email}/>
                        
-                        <input type="text" name="" id="" placeholder="Password"/>
+                        <input type="text" name="password" id="" placeholder="Password" value={password}/>
 
                         <button>Log In</button>
                         <p><a href="">Forgot password?</a></p>

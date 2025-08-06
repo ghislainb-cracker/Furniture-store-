@@ -29,11 +29,11 @@ export const SignUp = () => {
 
                         <h2 className="text-2xl font-bold mb-4 text-center">Sign Up</h2>
 
-                        <input type="text" name="" id="" placeholder="Username"/>
+                        <input type="text" name="username" id="" placeholder="Username" value={username}/>
                       
-                        <input type="text" name="" id="" placeholder="Email"/>
+                        <input type="text" name="email" id="" placeholder="Email" value={email}/>
                        
-                        <input type="text" name="" id="" placeholder="Password"/>
+                        <input type="text" name="password" id="" placeholder="Password" value={password}/>
 
                         <button>Sign Up</button>
                         <p>Already have an account? 
