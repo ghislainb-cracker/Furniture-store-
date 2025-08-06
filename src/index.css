@@ -347,3 +347,33 @@
 .hotdeal-product-card {
   transition: box-shadow 0.3s, transform 0.3s;
 }
+.signup-container{
+  width: 100%;
+  height: calc(100vh - 120px);
+  display: flex;
+}
+.signup-form{
+  width: 40%;
+  height: 100%;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signup-form-real{
+  height: 400px;
+  width: 90%;
+  border-radius: 15px;
+  background-color: white;
+}
+.welcome{
+  width: 60%;
+  height: 100%;
+  /* background-color: blue; */
+  display: flex;
+  align-items: center;
+}
+.welcome > h1{
+  font-size: 70px;
+  color: white;
+}

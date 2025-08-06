@@ -82,7 +82,9 @@ export default function Header(){
                   </div>
                 </Link>
 
+                <Link to="/signup" className="text-decoration-none">
                 <button type='button' className='signup-btn'>Signup</button>
+                </Link>
               </div>
               <button 
                   className="navbar-toggler" 
