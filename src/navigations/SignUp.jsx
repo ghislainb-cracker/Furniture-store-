@@ -1,15 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Header from "../components/header";
 import { Link } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 
 export const SignUp = () => {
-    const [username, setUsername] = useState("");
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-
-    function handleSubmit() {
-
-    }
+    const { username, setUsername, email, setEmail, password, setPassword, loading, handleRegister } = useContext(UserContext)
 
     return (
         <>
@@ -19,7 +14,7 @@ export const SignUp = () => {
                     <h1>Welcome to Fun Furniture store, creative and passion driven store</h1>
                 </div>
                 <div className="signup-form">
-                    <form onSubmit={handleSubmit} className="signup-form-real">
+                    <form onSubmit={handleRegister} className="signup-form-real">
 
                         <div className='brand-wrapper2'>
                             <div className="logo-circle2">
@@ -29,17 +24,15 @@ export const SignUp = () => {
 
                         <h2 className="text-2xl font-bold mb-4 text-center">Sign Up</h2>
 
-                        <input type="text" name="username" id="" placeholder="Username" value={username}/>
+                        <input type="text" name="username" id="registerUsername" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} />
                       
-                        <input type="text" name="email" id="" placeholder="Email" value={email}/>
+                        <input type="email" name="email" id="registerEmail" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
                        
-                        <input type="text" name="password" id="" placeholder="Password" value={password}/>
+                        <input type="password" name="password" id="registerPassword" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
 
-                        <button>Sign Up</button>
+                        {loading ? <button className="bg-secondary" disabled>Wait...</button> :  <button>Sign Up</button>}
                         <p>Already have an account? 
-                            <Link to='/login' className="text-decoration-none">
-                            <a href="">Login</a>
-                            </Link>
+                            <Link to='/login' className="text-decoration-none"><a href="">Login</a></Link>
                         </p>
                     </form>
                 </div>
