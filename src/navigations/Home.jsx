@@ -148,7 +148,7 @@ export default function Home(props) {
               <p className="mb-0">&copy;Funstore 2025 </p>
             </div>
             <div>
-              <p>Powered by Ghislain-soft-innovation</p>
+              <p style={{fontWeight: 'bold'}}>Powered by Ghislain-soft-innovations</p>
             </div>
           </div>
         </div>

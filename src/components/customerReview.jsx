@@ -30,37 +30,37 @@ export default function CustomerReview(){
                 >
                     {[
                         {
-                            name: "Sarah M.",
+                            name: "Uwizeyimana M.",
                             avatar: "https://randomuser.me/api/portraits/women/44.jpg",
                             text: "Absolutely love my new sofa! The quality is top-notch and delivery was super fast. Will definitely shop here again.",
                             rating: 5
                         },
                         {
-                            name: "James K.",
+                            name: "Kamanzi J.",
                             avatar: "https://randomuser.me/api/portraits/men/32.jpg",
                             text: "Great customer service and the dining table fits perfectly in my apartment. Highly recommend Fun Furniture!",
                             rating: 4
                         },
                         {
-                            name: "Linda W.",
+                            name: "Uwase L.",
                             avatar: "https://randomuser.me/api/portraits/women/65.jpg",
                             text: "The bed I ordered is so comfy and stylish. The whole process was smooth and easy.",
                             rating: 5
                         },
                         {
-                            name: "Michael B.",
+                            name: "Mucyo B.",
                             avatar: "https://randomuser.me/api/portraits/men/76.jpg",
                             text: "I was impressed by the variety and the prices. My new bookshelf looks amazing in my study.",
                             rating: 4
                         },
                         {
-                            name: "Aisha T.",
+                            name: "Kananura G.",
                             avatar: "https://randomuser.me/api/portraits/women/22.jpg",
                             text: "Fast shipping and the product matches the description perfectly. Thank you!",
                             rating: 5
                         },
                         {
-                            name: "Carlos R.",
+                            name: "Manzi R.",
                             avatar: "https://randomuser.me/api/portraits/men/41.jpg",
                             text: "The chair is sturdy and comfortable. I appreciate the eco-friendly packaging too.",
                             rating: 4
