@@ -112,7 +112,7 @@ export default function Home(props) {
               </ul>
             </div>
             <div className="col-md-6 col-lg-3">
-              <h5 className='mb-3'>Amazon payment products</h5>
+              <h5 className='mb-3'>Fun furniture payment products</h5>
               <ul className="list-unstyled lh-lg">
                 <li>Fun Furniture Rewards Visa Signature Cards</li>
                 <li>Fun Furniture Store Card</li>
@@ -124,7 +124,7 @@ export default function Home(props) {
             <div className="col-md-6 col-lg-3">
               <h5 className='mb-3'>Let us help you</h5>
               <ul className="list-unstyled lh-lg">
-                <li>Fun Furniture and COVID-19</li>
+                <li>Fun Furniture and creativity</li>
                 <li>Your Account</li>
                 <li>Your Orders</li>
                 <li>Shipping Rates & Policies</li>
@@ -145,7 +145,10 @@ export default function Home(props) {
               <span>Discord</span>
             </div>
             <div>
-              <p className="mb-0">&copy;Funstore 2025</p>
+              <p className="mb-0">&copy;Funstore 2025 </p>
+            </div>
+            <div>
+              <p>Powered by Ghislain-soft-innovation</p>
             </div>
           </div>
         </div>

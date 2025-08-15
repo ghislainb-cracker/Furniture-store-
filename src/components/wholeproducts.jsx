@@ -61,7 +61,7 @@ export default function WholeProducts() {
               </div>
             </div>
           </div>
-          {/* Card 2 */}
+          
           <div className="d-block" style={{ background: '#000000', color: '#ffffff', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
             <div style={{ height: '180px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img

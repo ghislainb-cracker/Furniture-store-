@@ -140,7 +140,7 @@ const CartPage = () => {
                           </button>
                           <input
                             type="number"
-                            min="1"
+                            min="2"
                             className="form-control mx-2 text-center"
                             style={{ width: 50 }}
                             value={quantities[item.cartItemId] || 1}
