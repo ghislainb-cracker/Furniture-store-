@@ -1,14 +1,14 @@
 import React, { useRef, useState } from "react";
 
 const videoSources1 = [
-  "../src/assets/furniture/one.mp4",
-  "../src/assets/furniture/one.mp4"
+  "/furniture/one.mp4",
+  "/furniture/one.mp4"
   // Add more video paths as needed
 ];
 
 const videoSources2 = [
-  "../src/assets/furniture/fun_video.mp4",
-  "../src/assets/furniture/fun_video.mp4"
+  "/furniture/fun_video.mp4",
+  "/furniture/fun_video.mp4"
   // Add more video paths as needed
 ];
 
@@ -275,7 +275,7 @@ export default function HotDeals(){
                 tag: "20%",
                 tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
                 tagClass: "h6 text-light",
-                img: "../src/assets/furniture/arrival-9.jpg",
+                img: "/furniture/arrival-9.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Home carbonated table...",
@@ -288,7 +288,7 @@ export default function HotDeals(){
                 tag: "Free Shipping",
                 tagStyle: { backgroundColor: "blue", paddingInline: "0px", width: "98px", fontSize: "12px" },
                 tagClass: "text-light",
-                img: "../src/assets/furniture/arrival-10.jpg",
+                img: "/furniture/arrival-10.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Bamboo stylish X-chair..",
@@ -300,7 +300,7 @@ export default function HotDeals(){
                 tag: "20%",
                 tagStyle: { backgroundColor: "#e53935", paddingInline: "0px", width: "48px" },
                 tagClass: "h6 text-light",
-                img: "../src/assets/furniture/arrival-11.jpg",
+                img: "/furniture/arrival-11.jpg",
                 imgHeight: "60%",
                 alt: "Home carbonated table",
                 title: "Decorated bend table...",
@@ -313,7 +313,7 @@ export default function HotDeals(){
                 tag: "20%",
                 tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
                 tagClass: "h6 text-light",
-                img: "../src/assets/furniture/arrival-12.jpg",
+                img: "/furniture/arrival-12.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Furistic caple bed...",
@@ -326,7 +326,7 @@ export default function HotDeals(){
                 tag: "Free Shipping",
                 tagStyle: { backgroundColor: "blue", paddingInline: "0px", width: "98px", fontSize: "12px" },
                 tagClass: "text-light",
-                img: "../src/assets/furniture/arrival-13.jpg",
+                img: "/furniture/arrival-13.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Wireless charging sofa...",
@@ -338,7 +338,7 @@ export default function HotDeals(){
                 tag: "20%",
                 tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
                 tagClass: "h6 text-light",
-                img: "../src/assets/furniture/arrival-8.jpg",
+                img: "/furniture/arrival-8.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Home carbonated table...",
@@ -351,7 +351,7 @@ export default function HotDeals(){
                 tag: "Free Shipping",
                 tagStyle: { backgroundColor: "blue", paddingInline: "0px", width: "98px", fontSize: "12px" },
                 tagClass: "text-light",
-                img: "../src/assets/furniture/arrival-7.jpg",
+                img: "/furniture/arrival-7.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Home carbonated table...",
@@ -364,7 +364,7 @@ export default function HotDeals(){
                 tag: "20%",
                 tagStyle: { backgroundColor: "#e53935", paddingInline: "30px", width: "48px" },
                 tagClass: "h6 text-light",
-                img: "../src/assets/furniture/head-1.jpg",
+                img: "/furniture/head-1.jpg",
                 imgHeight: "55%",
                 alt: "Home carbonated table",
                 title: "Home carbonated table...",
@@ -480,7 +480,7 @@ export default function HotDeals(){
             // Instead of just image paths, use product objects for richer info
             const productData = [
               {
-                src: "../src/assets/furniture/head-2.jpg",
+                src: "/furniture/head-2.jpg",
                 name: "Modern Headboard",
                 price: 89.99,
                 oldPrice: 119.99,
@@ -489,7 +489,7 @@ export default function HotDeals(){
                 tag: "20% OFF"
               },
               {
-                src: "../src/assets/furniture/head-3.jpg",
+                src: "/furniture/head-3.jpg",
                 name: "Classic Bed Frame",
                 price: 129.99,
                 oldPrice: 159.99,
@@ -498,7 +498,7 @@ export default function HotDeals(){
                 tag: "New"
               },
               {
-                src: "../src/assets/furniture/head-1.jpg",
+                src: "/furniture/head-1.jpg",
                 name: "Minimalist Headboard",
                 price: 74.99,
                 oldPrice: 99.99,
@@ -507,7 +507,7 @@ export default function HotDeals(){
                 tag: "Hot Deal"
               },
               {
-                src: "../src/assets/furniture/head-4.jpg",
+                src: "/furniture/head-4.jpg",
                 name: "Upholstered Bed",
                 price: 199.99,
                 oldPrice: 249.99,
@@ -516,7 +516,7 @@ export default function HotDeals(){
                 tag: "Best Seller"
               },
               {
-                src: "../src/assets/furniture/head-5.jpg",
+                src: "/furniture/head-5.jpg",
                 name: "Rustic Headboard",
                 price: 109.99,
                 oldPrice: 139.99,
@@ -525,7 +525,7 @@ export default function HotDeals(){
                 tag: "20% OFF"
               },
               {
-                src: "../src/assets/furniture/head-7.jpg",
+                src: "/furniture/head-7.jpg",
                 name: "Kids Bed Frame",
                 price: 69.99,
                 oldPrice: 89.99,
@@ -534,7 +534,7 @@ export default function HotDeals(){
                 tag: "Limited"
               },
               {
-                src: "../src/assets/furniture/arrival-6.jpg",
+                src: "/furniture/arrival-6.jpg",
                 name: "Velvet Headboard",
                 price: 149.99,
                 oldPrice: 189.99,
@@ -543,7 +543,7 @@ export default function HotDeals(){
                 tag: "New"
               },
               {
-                src: "../src/assets/furniture/arrival-5.jpg",
+                src: "/furniture/arrival-5.jpg",
                 name: "Panel Bed",
                 price: 119.99,
                 oldPrice: 149.99,
@@ -830,7 +830,7 @@ export default function HotDeals(){
             // Instead of just image paths, use product objects for richer info
             const productData = [
               {
-                src: "../src/assets/furniture/head-2.jpg",
+                src: "/furniture/head-2.jpg",
                 name: "Modern Headboard",
                 price: 89.99,
                 oldPrice: 119.99,
@@ -839,7 +839,7 @@ export default function HotDeals(){
                 tag: "20% OFF"
               },
               {
-                src: "../src/assets/furniture/head-3.jpg",
+                src: "/furniture/head-3.jpg",
                 name: "Classic Bed Frame",
                 price: 129.99,
                 oldPrice: 159.99,
@@ -848,7 +848,7 @@ export default function HotDeals(){
                 tag: "New"
               },
               {
-                src: "../src/assets/furniture/head-1.jpg",
+                src: "/furniture/head-1.jpg",
                 name: "Minimalist Headboard",
                 price: 74.99,
                 oldPrice: 99.99,
@@ -857,7 +857,7 @@ export default function HotDeals(){
                 tag: "Hot Deal"
               },
               {
-                src: "../src/assets/furniture/head-4.jpg",
+                src: "/furniture/head-4.jpg",
                 name: "Upholstered Bed",
                 price: 199.99,
                 oldPrice: 249.99,
@@ -866,7 +866,7 @@ export default function HotDeals(){
                 tag: "Best Seller"
               },
               {
-                src: "../src/assets/furniture/head-5.jpg",
+                src: "/furniture/head-5.jpg",
                 name: "Rustic Headboard",
                 price: 109.99,
                 oldPrice: 139.99,
@@ -875,7 +875,7 @@ export default function HotDeals(){
                 tag: "20% OFF"
               },
               {
-                src: "../src/assets/furniture/head-7.jpg",
+                src: "/furniture/head-7.jpg",
                 name: "Kids Bed Frame",
                 price: 69.99,
                 oldPrice: 89.99,
@@ -884,7 +884,7 @@ export default function HotDeals(){
                 tag: "Limited"
               },
               {
-                src: "../src/assets/furniture/arrival-6.jpg",
+                src: "/furniture/arrival-6.jpg",
                 name: "Velvet Headboard",
                 price: 149.99,
                 oldPrice: 189.99,
@@ -893,7 +893,7 @@ export default function HotDeals(){
                 tag: "New"
               },
               {
-                src: "../src/assets/furniture/arrival-5.jpg",
+                src: "/furniture/arrival-5.jpg",
                 name: "Panel Bed",
                 price: 119.99,
                 oldPrice: 149.99,
