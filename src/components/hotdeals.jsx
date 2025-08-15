@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 
 const videoSources1 = [
-<<<<<<< HEAD
   "/furniture/one.mp4",
   "/furniture/one.mp4"
   // Add more video paths as needed
@@ -11,17 +10,6 @@ const videoSources2 = [
   "/furniture/fun_video.mp4",
   "/furniture/fun_video.mp4"
   // Add more video paths as needed
-=======
-  "../src/assets/furniture/one.mp4",
-  "../src/assets/furniture/one.mp4"
-  
-];
-
-const videoSources2 = [
-  "../src/assets/furniture/fun_video.mp4",
-  "../src/assets/furniture/fun_video.mp4"
-  
->>>>>>> b40b90ab7412216241c2b1cb5917eda09a025cb8
 ];
 
 function VideoAdCard({ sources, height = "200px" }) {
