@@ -37,7 +37,7 @@ export default function Home(props) {
 <section className="text-light mt-2 mb-5 text-center text-sm-start raised-section" data-aos="fade-up">
   <div className="container">
     <div className="row align-items-center">
-      {/* Content Column - Fixed width */}
+
       <div className="col-12 col-sm-6">
         <h1 className='fs-3xl' id="animated-text">Discover top quality furniture for your home decor need</h1>
         <p className='fs-md white2'>Browse by category or explore our latest collections</p>
@@ -61,7 +61,7 @@ export default function Home(props) {
         </div>
       </div>
       
-      {/* Image Column - Fixed width with reserved space */}
+
       <div className="col-12 col-sm-6 d-none d-sm-block">
         <div className="image-container" style={{minHeight: '300px', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
           <img 
@@ -148,7 +148,11 @@ export default function Home(props) {
               <p className="mb-0">&copy;Funstore 2025 </p>
             </div>
             <div>
+<<<<<<< HEAD
               <p>Powered by Ghislain-soft-innovation</p>
+=======
+              <p style={{fontWeight: 'bold'}}>Powered by Ghislain-soft-innovations</p>
+>>>>>>> b40b90ab7412216241c2b1cb5917eda09a025cb8
             </div>
           </div>
         </div>

@@ -485,7 +485,7 @@ export default function WholeProducts() {
           );
         })}
       </div>
-      {/* Well-designed "Shop Together" cards with images and visual richness */}
+     
       <div
         style={{
           display: 'grid',
@@ -495,7 +495,7 @@ export default function WholeProducts() {
           gap: '18px'
         }}
       >
-        {/* 3-product bundle card */}
+      
         <div
           style={{
             minHeight: '220px',
@@ -516,13 +516,9 @@ export default function WholeProducts() {
             alignItems: "flex-start",
             gap: "10px 0"
           }}>
-            {/*
-            To avoid violating the Rules of Hooks, move all hooks to the top level.
-            We define ProductImageScroller as an inner component of HotDeals.
-          */}
-            {/* Improved horizontal image scroller with left/right buttons and better usability */}
+           
             {(() => {
-              // Instead of just image paths, use product objects for richer info
+              
               const productData = [
                 {
                   src: "furniture/head-2.jpg",
@@ -558,7 +554,7 @@ export default function WholeProducts() {
 
               return (
                 <div style={{ position: 'relative', width: '100%', minHeight: 130 }}>
-                  {/* Image scroller */}
+                  
                   <div
                     style={{
                       gap: '18px',
@@ -594,7 +590,7 @@ export default function WholeProducts() {
                         onMouseEnter={() => setHoveredIdx(idx)}
                         onMouseLeave={() => setHoveredIdx(null)}
                       >
-                        {/* Tag badge */}
+                       
                         <div style={{
                           position: 'absolute',
                           top: 0,
@@ -610,7 +606,7 @@ export default function WholeProducts() {
                         }}>
                           {prod.tag}
                         </div>
-                        {/* Product image */}
+                       
                         <img
                           src={prod.src}
                           style={{
@@ -624,7 +620,7 @@ export default function WholeProducts() {
                           alt={prod.name}
                           draggable={false}
                         />
-                        {/* Overlay info on hover */}
+                       
                         <div
                           style={{
                             position: 'absolute',
@@ -665,7 +661,7 @@ export default function WholeProducts() {
                             }}
                             onMouseDown={e => e.preventDefault()}
                             onClick={() => {
-                              // Add to cart logic here
+                              // Add to cart logic is here
                               alert(`Added "${prod.name}" to cart!`);
                             }}
                             aria-label={`Add ${prod.name} to cart`}
@@ -673,18 +669,9 @@ export default function WholeProducts() {
                           >
                             <i className="fa fa-shopping-cart"></i>
                           </button>
-                          {/* <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
-                          {prod.desc}
-                        </div> */}
-                          {/* <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
-                          <span style={{fontWeight: 700, color: '#ffd700', fontSize: '1.1rem'}}>
-                            ${prod.price.toFixed(2)}
-                          </span>
-                          <strike style={{color: '#bbb', fontSize: '0.95rem'}}>${prod.oldPrice.toFixed(2)}</strike>
-                        </div> */}
-                          {/* {renderStars(prod.rating)} */}
+                         
                         </div>
-                        {/* Always show name and price at bottom left, but less prominent */}
+                      
                         <div style={{
                           position: 'absolute',
                           left: 0,
@@ -716,7 +703,7 @@ export default function WholeProducts() {
             <i className="fa fa-shopping-cart me-2"></i>Shop All
           </button>
         </div>
-        {/* 2-product bundle card */}
+       
         <div
           style={{
             minHeight: '220px',
@@ -737,11 +724,7 @@ export default function WholeProducts() {
             alignItems: "flex-start",
             gap: "10px 0"
           }}>
-            {/*
-            To avoid violating the Rules of Hooks, move all hooks to the top level.
-            We define ProductImageScroller as an inner component of HotDeals.
-          */}
-            {/* Improved horizontal image scroller with left/right buttons and better usability */}
+           
             {(() => {
               // Instead of just image paths, use product objects for richer info
               const productData = [
@@ -770,7 +753,7 @@ export default function WholeProducts() {
 
               return (
                 <div style={{ position: 'relative', width: '100%', minHeight: 130 }}>
-                  {/* Image scroller */}
+                 
                   <div
                     style={{
                       gap: '18px',
@@ -807,7 +790,7 @@ export default function WholeProducts() {
                         onMouseEnter={() => setHoveredIdx(idx)}
                         onMouseLeave={() => setHoveredIdx(null)}
                       >
-                        {/* Tag badge */}
+                       
                         <div style={{
                           position: 'absolute',
                           top: 0,
@@ -823,7 +806,7 @@ export default function WholeProducts() {
                         }}>
                           {prod.tag}
                         </div>
-                        {/* Product image */}
+                       
                         <img
                           src={prod.src}
                           style={{
@@ -837,7 +820,7 @@ export default function WholeProducts() {
                           alt={prod.name}
                           draggable={false}
                         />
-                        {/* Overlay info on hover */}
+                      
                         <div
                           style={{
                             position: 'absolute',
@@ -886,18 +869,9 @@ export default function WholeProducts() {
                           >
                             <i className="fa fa-shopping-cart"></i>
                           </button>
-                          {/* <div style={{fontSize: '0.92rem', color: '#c2e9fb', marginBottom: 4, minHeight: 32}}>
-                          {prod.desc}
-                        </div> */}
-                          {/* <div style={{display: 'flex', alignItems: 'center', gap: '7px', marginBottom: 2}}>
-                          <span style={{fontWeight: 700, color: '#ffd700', fontSize: '1.1rem'}}>
-                            ${prod.price.toFixed(2)}
-                          </span>
-                          <strike style={{color: '#bbb', fontSize: '0.95rem'}}>${prod.oldPrice.toFixed(2)}</strike>
-                        </div> */}
-                          {/* {renderStars(prod.rating)} */}
+                         
                         </div>
-                        {/* Always show name and price at bottom left, but less prominent */}
+                       
                         <div style={{
                           position: 'absolute',
                           left: 0,
@@ -941,7 +915,7 @@ export default function WholeProducts() {
           boxShadow: '0 4px 24px 0 rgba(0,0,0,0.10)'
         }}
       >
-        {/* Card 1 */}
+       
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
@@ -968,7 +942,7 @@ export default function WholeProducts() {
             </div>
           </div>
         </div>
-        {/* Card 2 */}
+      
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
@@ -995,7 +969,7 @@ export default function WholeProducts() {
             </div>
           </div>
         </div>
-        {/* Card 3 */}
+      
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
@@ -1022,7 +996,7 @@ export default function WholeProducts() {
             </div>
           </div>
         </div>
-        {/* Card 4 */}
+      
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img

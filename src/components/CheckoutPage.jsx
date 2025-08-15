@@ -21,7 +21,7 @@ const CheckoutPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("🎉 Order placed successfully!\nWe’ll be in touch soon.");
-    // Here you could clear cart, save to backend, etc.
+   
   };
 
   const subtotal = cartItems.reduce(
@@ -36,7 +36,7 @@ const CheckoutPage = () => {
     <div className="container my-5">
       <h2 className="mb-4 text-light">🛍️ Checkout</h2>
       <div className="row">
-        {/* Form Section */}
+       
         <div className="col-md-7">
           <form onSubmit={handleSubmit} className="bg-white p-4 rounded shadow">
             <h5 className="mb-3">Customer Info</h5>
@@ -76,7 +76,7 @@ const CheckoutPage = () => {
           </form>
         </div>
 
-        {/* Order Summary */}
+        
         <div className="col-md-5">
           <div className="bg-white p-4 rounded shadow sticky-top" style={{ top: "80px" }}>
             <h5 className="mb-3">Order Summary</h5>

@@ -1,4 +1,4 @@
-// Star.js
+
 export default function Star({ on, handleClick }) {
   return (
     <i 

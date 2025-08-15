@@ -1,9 +1,8 @@
 import { createContext, useState, useEffect } from "react";
 
-// 1. Create the context
 export const CartContext = createContext();
 
-// 2. Create the provider
+
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     const savedCart = localStorage.getItem("cartItems");
@@ -11,7 +10,7 @@ export const CartProvider = ({ children }) => {
   });
 
   const addToCart = (product, options = {}) => {
-    // Generate a unique cart item id based on product id and options
+    
     const cartItemId = `${product.id}_${options.color || 'default'}_${options.size || 'default'}`;
     setCartItems(prev => [
       ...prev,
@@ -28,7 +27,7 @@ export const CartProvider = ({ children }) => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-  // ✅ Return the provider
+  // Returning the provider
   return (
     <CartContext.Provider value={{ cartItems, addToCart, removeFromCart }}>
       {children}
