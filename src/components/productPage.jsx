@@ -38,9 +38,9 @@ const ProductPage = () => {
 
   const images = [
     product.img,
-    "/furniture/6.png",
-    "/furniture/7.png",
-    "/furniture/8.png"
+    "./furniture/6.png",
+    "./furniture/7.png",
+    "./furniture/8.png"
   ];
 
   // Related products data
@@ -48,7 +48,7 @@ const ProductPage = () => {
     {
       id: 1,
       title: "Modern Lounge Chair",
-      img: "/furniture/7.png",
+      img: "./furniture/7.png",
       price: "$199.00",
       rating: 4.5,
       reviews: 120
@@ -56,7 +56,7 @@ const ProductPage = () => {
     {
       id: 2,
       title: "Classic Wooden Table",
-      img: "/furniture/8.png",
+      img: "./furniture/8.png",
       price: "$299.00",
       rating: 4.0,
       reviews: 89
@@ -64,7 +64,7 @@ const ProductPage = () => {
     {
       id: 3,
       title: "Minimalist Sofa",
-      img: "/furniture/6.png",
+      img: "./furniture/6.png",
       price: "$399.00",
       rating: 3.5,
       reviews: 54

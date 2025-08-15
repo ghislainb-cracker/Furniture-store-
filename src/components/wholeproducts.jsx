@@ -23,7 +23,7 @@ export default function WholeProducts() {
           <div className="d-block" style={{ background: '#000000', color: '#ffffff', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
             <div style={{ height: '180px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
-                src="/furniture/7.png"
+                src="./furniture/7.png"
                 alt="Modern Chair"
                 style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
               />
@@ -65,7 +65,7 @@ export default function WholeProducts() {
           <div className="d-block" style={{ background: '#000000', color: '#ffffff', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
             <div style={{ height: '180px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
-                src="/furniture/5.png"
+                src="./furniture/5.png"
                 alt="Modern Chair"
                 style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
               />
@@ -107,7 +107,7 @@ export default function WholeProducts() {
           <div className="d-block" style={{ background: '#000000', color: '#ffffff', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
             <div style={{ height: '180px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
-                src="/furniture/3.png"
+                src="./furniture/3.png"
                 alt="Modern Chair"
                 style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
               />
@@ -149,7 +149,7 @@ export default function WholeProducts() {
           <div className="d-block" style={{ background: '#000000', color: '#ffffff', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
             <div style={{ height: '180px', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
               <img
-                src="/furniture/4.png"
+                src="./furniture/4.png"
                 alt="Modern Chair"
                 style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
               />
@@ -223,7 +223,7 @@ export default function WholeProducts() {
       >
         {[
           {
-            img: '/furniture/sub-table.png',
+            img: './furniture/sub-table.png',
             title: 'Microsoft AI Sofa Chair',
             desc: `Discover the future of comfort with our Microsoft AI Sofa Chair.\nDesigned for modern living spaces, this chair adapts to your posture.\nPremium materials ensure durability and a luxurious feel.\nAI-powered adjustments provide personalized support all day.\nEasy to clean and maintain for busy households.\nSleek design fits seamlessly into any decor.\nEco-friendly construction for a sustainable choice.\nLightweight yet sturdy for easy rearrangement.\nPerfect for work, relaxation, or entertaining guests.\nExperience innovation and style in one package.`,
             price: '$340 - $354',
@@ -234,7 +234,7 @@ export default function WholeProducts() {
             category: 'sofa'
           },
           {
-            img: '/furniture/3.png',
+            img: './furniture/3.png',
             title: 'Modern Lounge Chair',
             desc: `Elevate your home with the Modern Lounge Chair.\nErgonomic contours cradle your body for ultimate relaxation.\nHigh-density foam cushions offer lasting comfort.\nUpholstered in soft, breathable fabric for year-round use.\nSolid wood frame ensures stability and longevity.\nMinimalist design complements any room.\nEasy assembly with included instructions.\nNon-slip feet protect your floors.\nAvailable in multiple colors to suit your style.\nA perfect blend of form and function.`,
             price: '$340 - $354',
@@ -245,7 +245,7 @@ export default function WholeProducts() {
             category: 'chair'
           },
           {
-            img: '/furniture/2.png',
+            img: './furniture/2.png',
             title: 'Luxury Recliner',
             desc: `Unwind in luxury with our state-of-the-art Recliner.\nReclines up to 180° for optimal comfort.\nSupportive headrest and lumbar cushioning.\nSmooth, quiet reclining mechanism.\nPremium leather finish for a sophisticated look.\nBuilt-in cup holders for convenience.\nStain-resistant and easy to clean.\nPerfect for movie nights or afternoon naps.\nCompact design fits small spaces.\nEnjoy relaxation like never before.`,
             price: '$340 - $354',
@@ -256,7 +256,7 @@ export default function WholeProducts() {
             category: 'table'
           },
           {
-            img: '/furniture/3.png',
+            img: './furniture/3.png',
             title: 'Minimalist Armchair',
             desc: `Add a touch of elegance with the Minimalist Armchair.\nSleek lines and modern silhouette.\nSturdy metal frame for lasting durability.\nPlush seat and backrest for comfort.\nNeutral tones blend with any decor.\nLightweight for easy movement.\nAssembly is quick and hassle-free.\nPerfect for living rooms or offices.\nLow-maintenance materials.\nA stylish addition to any space.`,
             price: '$340 - $354',
@@ -267,7 +267,7 @@ export default function WholeProducts() {
             category: 'bed'
           },
           {
-            img: '/furniture/4.png',
+            img: './furniture/4.png',
             title: 'Classic Wooden Chair',
             desc: `Classic Wooden Chair brings timeless charm to your home.\nHandcrafted from solid wood for strength.\nErgonomic backrest supports good posture.\nSmooth, polished finish highlights natural grain.\nVersatile design suits dining or study areas.\nEasy to stack and store.\nProtective pads prevent floor scratches.\nSimple, elegant, and functional.\nSustainably sourced materials.\nA must-have for traditional interiors.`,
             price: '$340 - $354',
@@ -278,7 +278,7 @@ export default function WholeProducts() {
             category: 'bed'
           },
           {
-            img: '/furniture/5.png',
+            img: './furniture/5.png',
             title: 'AI Smart Table',
             desc: `Upgrade your workspace with the AI Smart Table.\nIntegrated wireless charging for your devices.\nSpacious tabletop for multitasking.\nSleek, modern design enhances productivity.\nDurable, scratch-resistant surface.\nHidden cable management keeps things tidy.\nAdjustable height for ergonomic comfort.\nEasy to assemble and move.\nEco-friendly materials used.\nA smart solution for modern offices.`,
             price: '$340 - $354',
@@ -289,7 +289,7 @@ export default function WholeProducts() {
             category: 'desk'
           },
           {
-            img: '/furniture/6.png',
+            img: './furniture/6.png',
             title: 'Ergo Office Chair',
             desc: `Work in comfort with the Ergo Office Chair.\nBreathable mesh back keeps you cool.\nAdjustable seat height and armrests.\nLumbar support reduces back strain.\nSmooth-rolling casters for mobility.\nSturdy base for stability.\nEasy to assemble with clear instructions.\nContemporary design fits any office.\nSupports long hours of productivity.\nYour back will thank you.`,
             price: '$340 - $354',
@@ -300,7 +300,7 @@ export default function WholeProducts() {
             category: 'bench'
           },
           {
-            img: '/furniture/7.png',
+            img: './furniture/7.png',
             title: 'Premium Sofa Set',
             desc: `Host in style with the Premium Sofa Set.\nSpacious seating for family and friends.\nPlush cushions provide exceptional comfort.\nDurable upholstery resists wear and tear.\nSturdy frame ensures long-lasting use.\nModern design elevates your living room.\nEasy to clean and maintain.\nNeutral colors match any decor.\nPerfect for gatherings or quiet nights in.\nA centerpiece for your home.`,
             price: '$340 - $354',
@@ -311,7 +311,7 @@ export default function WholeProducts() {
             category: 'bench'
           },
           {
-            img: '/furniture/sub-table.png',
+            img: './furniture/sub-table.png',
             title: 'Microsoft AI Sofa Chair',
             desc: `Discover the future of comfort with our Microsoft AI Sofa Chair.\nDesigned for modern living spaces, this chair adapts to your posture.\nPremium materials ensure durability and a luxurious feel.\nAI-powered adjustments provide personalized support all day.\nEasy to clean and maintain for busy households.\nSleek design fits seamlessly into any decor.\nEco-friendly construction for a sustainable choice.\nLightweight yet sturdy for easy rearrangement.\nPerfect for work, relaxation, or entertaining guests.\nExperience innovation and style in one package.`,
             price: '$340 - $354',
@@ -322,7 +322,7 @@ export default function WholeProducts() {
             category: 'stool'
           },
           {
-            img: '/furniture/3.png',
+            img: './furniture/3.png',
             title: 'Modern Lounge Chair',
             desc: `Elevate your home with the Modern Lounge Chair.\nErgonomic contours cradle your body for ultimate relaxation.\nHigh-density foam cushions offer lasting comfort.\nUpholstered in soft, breathable fabric for year-round use.\nSolid wood frame ensures stability and longevity.\nMinimalist design complements any room.\nEasy assembly with included instructions.\nNon-slip feet protect your floors.\nAvailable in multiple colors to suit your style.\nA perfect blend of form and function.`,
             price: '$340 - $354',
@@ -333,7 +333,7 @@ export default function WholeProducts() {
             category: 'shelf'
           },
           {
-            img: '/furniture/2.png',
+            img: './furniture/2.png',
             title: 'Luxury Recliner',
             desc: `Unwind in luxury with our state-of-the-art Recliner.\nReclines up to 180° for optimal comfort.\nSupportive headrest and lumbar cushioning.\nSmooth, quiet reclining mechanism.\nPremium leather finish for a sophisticated look.\nBuilt-in cup holders for convenience.\nStain-resistant and easy to clean.\nPerfect for movie nights or afternoon naps.\nCompact design fits small spaces.\nEnjoy relaxation like never before.`,
             price: '$340 - $354',
@@ -344,7 +344,7 @@ export default function WholeProducts() {
             category: 'couch'
           },
           {
-            img: '/furniture/3.png',
+            img: './furniture/3.png',
             title: 'Minimalist Armchair',
             desc: `Add a touch of elegance with the Minimalist Armchair.\nSleek lines and modern silhouette.\nSturdy metal frame for lasting durability.\nPlush seat and backrest for comfort.\nNeutral tones blend with any decor.\nLightweight for easy movement.\nAssembly is quick and hassle-free.\nPerfect for living rooms or offices.\nLow-maintenance materials.\nA stylish addition to any space.`,
             price: '$340 - $354',
@@ -355,7 +355,7 @@ export default function WholeProducts() {
             category: 'sofa'
           },
           {
-            img: '/furniture/4.png',
+            img: './furniture/4.png',
             title: 'Classic Wooden Chair',
             desc: `Classic Wooden Chair brings timeless charm to your home.\nHandcrafted from solid wood for strength.\nErgonomic backrest supports good posture.\nSmooth, polished finish highlights natural grain.\nVersatile design suits dining or study areas.\nEasy to stack and store.\nProtective pads prevent floor scratches.\nSimple, elegant, and functional.\nSustainably sourced materials.\nA must-have for traditional interiors.`,
             price: '$340 - $354',
@@ -366,7 +366,7 @@ export default function WholeProducts() {
             category: 'table'
           },
           {
-            img: '/furniture/5.png',
+            img: './furniture/5.png',
             title: 'AI Smart Table',
             desc: `Upgrade your workspace with the AI Smart Table.\nIntegrated wireless charging for your devices.\nSpacious tabletop for multitasking.\nSleek, modern design enhances productivity.\nDurable, scratch-resistant surface.\nHidden cable management keeps things tidy.\nAdjustable height for ergonomic comfort.\nEasy to assemble and move.\nEco-friendly materials used.\nA smart solution for modern offices.`,
             price: '$340 - $354',
@@ -377,7 +377,7 @@ export default function WholeProducts() {
             category: 'chair'
           },
           {
-            img: '/furniture/6.png',
+            img: './furniture/6.png',
             title: 'Ergo Office Chair',
             desc: `Work in comfort with the Ergo Office Chair.\nBreathable mesh back keeps you cool.\nAdjustable seat height and armrests.\nLumbar support reduces back strain.\nSmooth-rolling casters for mobility.\nSturdy base for stability.\nEasy to assemble with clear instructions.\nContemporary design fits any office.\nSupports long hours of productivity.\nYour back will thank you.`,
             price: '$340 - $354',
@@ -388,7 +388,7 @@ export default function WholeProducts() {
             category: 'desk'
           },
           {
-            img: '/furniture/7.png',
+            img: './furniture/7.png',
             title: 'Premium Sofa Set',
             desc: `Host in style with the Premium Sofa Set.\nSpacious seating for family and friends.\nPlush cushions provide exceptional comfort.\nDurable upholstery resists wear and tear.\nSturdy frame ensures long-lasting use.\nModern design elevates your living room.\nEasy to clean and maintain.\nNeutral colors match any decor.\nPerfect for gatherings or quiet nights in.\nA centerpiece for your home.`,
             price: '$340 - $354',
@@ -521,7 +521,7 @@ export default function WholeProducts() {
               
               const productData = [
                 {
-                  src: "/furniture/head-2.jpg",
+                  src: "./furniture/head-2.jpg",
                   name: "Modern Headboard",
                   price: 89.99,
                   oldPrice: 119.99,
@@ -530,7 +530,7 @@ export default function WholeProducts() {
                   tag: "20% OFF"
                 },
                 {
-                  src: "/furniture/head-3.jpg",
+                  src: "./furniture/head-3.jpg",
                   name: "Classic Bed Frame",
                   price: 129.99,
                   oldPrice: 159.99,
@@ -539,7 +539,7 @@ export default function WholeProducts() {
                   tag: "New"
                 },
                 {
-                  src: "/furniture/head-1.jpg",
+                  src: "./furniture/head-1.jpg",
                   name: "Minimalist Headboard",
                   price: 74.99,
                   oldPrice: 99.99,
@@ -729,7 +729,7 @@ export default function WholeProducts() {
               // Instead of just image paths, use product objects for richer info
               const productData = [
                 {
-                  src: "/furniture/head-2.jpg",
+                  src: "./furniture/head-2.jpg",
                   name: "Modern Headboard",
                   price: 89.99,
                   oldPrice: 119.99,
@@ -738,7 +738,7 @@ export default function WholeProducts() {
                   tag: "20% OFF"
                 },
                 {
-                  src: "/furniture/head-3.jpg",
+                  src: "./furniture/head-3.jpg",
                   name: "Classic Bed Frame",
                   price: 129.99,
                   oldPrice: 159.99,
@@ -919,7 +919,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/7.png"
+              src="./furniture/7.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -946,7 +946,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/5.png"
+              src="./furniture/5.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -973,7 +973,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/3.png"
+              src="./furniture/3.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -1000,7 +1000,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/4.png"
+              src="./furniture/4.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -1026,7 +1026,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/7.png"
+              src="./furniture/7.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -1052,7 +1052,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/7.png"
+              src="./furniture/7.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -1078,7 +1078,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/7.png"
+              src="./furniture/7.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -1104,7 +1104,7 @@ export default function WholeProducts() {
         <div className="d-block" style={{ background: 'rgba(255,255,255,0.97)', borderRadius: '12px', boxShadow: '0 2px 8px 0 rgba(0,0,0,0.07)', overflow: 'hidden', transition: 'transform 0.2s', cursor: 'pointer' }}>
           <div style={{ height: '180px', background: '#f7f7f7', position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             <img
-              src="/furniture/7.png"
+              src="./furniture/7.png"
               alt="Modern Chair"
               style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '0 0 12px 12px' }}
             />
@@ -1205,7 +1205,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-1.jpg"
+                  src="./furniture/arrival-1.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1254,7 +1254,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-11.jpg"
+                  src="./furniture/arrival-11.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1303,7 +1303,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-12.jpg"
+                  src="./furniture/arrival-12.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1352,7 +1352,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-13.jpg"
+                  src="./furniture/arrival-13.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1401,7 +1401,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-8.jpg"
+                  src="./furniture/arrival-8.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1450,7 +1450,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-9.jpg"
+                  src="./furniture/arrival-9.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1499,7 +1499,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-10.jpg"
+                  src="./furniture/arrival-10.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1548,7 +1548,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-10.jpg"
+                  src="./furniture/arrival-10.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1597,7 +1597,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-10.jpg"
+                  src="./furniture/arrival-10.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1646,7 +1646,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-10.jpg"
+                  src="./furniture/arrival-10.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1695,7 +1695,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-10.jpg"
+                  src="./furniture/arrival-10.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
@@ -1744,7 +1744,7 @@ export default function WholeProducts() {
                   20%
                 </div>
                 <img
-                  src="/furniture/arrival-10.jpg"
+                  src="./furniture/arrival-10.jpg"
                   style={{
                     width: "100%",
                     height: "55%",
