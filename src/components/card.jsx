@@ -3,7 +3,7 @@ return(
     <>
             <div className="text-light">
                         <img 
-                        src="../src/assets/furniture/arrival-6.jpg" 
+                        src="/arrival-6.jpg" 
                         alt=""
                         className='img-fluid mb-2'
                         style={{width: '270px',height: '160px',borderRadius: '15px', objectFit: 'cover'}} 
