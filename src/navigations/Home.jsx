@@ -53,7 +53,7 @@ export default function Home(props) {
             />
             <span 
               className="input-group-text rounded-pill text-white dark8 fs-2xl my-4" 
-              style={{ backgroundColor: '#424242', color: '#ffffff', border: 'none', marginLeft: '10px', border: '1px solid #ffffff'}}
+              style={{ backgroundColor: '#424242', color: '#ffffff', marginLeft: '10px', border: '1px solid #ffffff'}}
               id="search-icon">
               <i className="fas fa-search"></i>
             </span>

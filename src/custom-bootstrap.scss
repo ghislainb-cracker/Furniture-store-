@@ -1,27 +1,21 @@
+// Fixed Bootstrap SCSS configuration
+@use "bootstrap/scss/bootstrap" with (
+  // Override theme colors to include your custom colors
+  $theme-colors: (
+    "primary": #0d6efd,      // Bootstrap's default primary
+    "secondary": #6c757d,    // Bootstrap's default secondary
+    "success": #198754,      // Bootstrap's default success
+    "info": #0dcaf0,         // Bootstrap's default info
+    "warning": #ffc107,      // Bootstrap's default warning
+    "danger": #dc3545,       // Bootstrap's default danger
+    "light": #f8f9fa,        // Bootstrap's default light
+    "dark": #212529,         // Bootstrap's default dark
+    "pink": #e91e63,         // Your custom color
+    "my-dark-blue": #1a237e, // Your custom color
+  ),
 
-@import "bootstrap/scss/functions";
-
-
-@import "bootstrap/scss/variables";
-
-
-$custom-colors: (
-  "pink": #e91e63,
-  "my-dark-blue": #1a237e,
-);
-
-
-$theme-colors: map-merge($theme-colors, $custom-colors);
-
-
-@import "bootstrap/scss/maps";
-@import "bootstrap/scss/mixins";
-@import "bootstrap/scss/utilities";
-
-
-$utilities: map-merge(
-  $utilities,
-  (
+  // Custom utilities - this will be merged with Bootstrap's defaults automatically
+  $utilities: (
     "opacity": (
       property: opacity,
       class: opacity,
@@ -39,6 +33,3 @@ $utilities: map-merge(
     )
   )
 );
-
-
-@import "bootstrap/scss/bootstrap";

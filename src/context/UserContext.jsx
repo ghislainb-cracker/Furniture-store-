@@ -18,47 +18,75 @@ export const UserContextProvider = ({ children }) => {
 
      const navigate = useNavigate()
 
-     const handleLogin = async (e) => {
-          e.preventDefault()
-          setLoading(true)
-          try {    
-               const response = await axios.post(`${backend}/api/users/login`, { email, password })
-               SetUser({username: response.data.data.username, useremail: response.data.data.useremail, userId: response.data.data.userid, userrole: response.data.data.userrole})
-               setLoading(false)
-               setToken(response.data.data.token)
-               toast.success(response.data.message)
-               navigate("/")
-          } catch (error) {
-               setLoading(false)
-               if (error.response.data) {
-                    toast.warn(error.response.data.message)
-               } else {
-                    toast.warn("Failed to login")
-               }
-               console.warn("Login: ", error)
-          }
-     }
-     
-     const handleRegister = async (e) => {
-          e.preventDefault()
-          setLoading(true)
-          try {    
-               const response = await axios.post(`${backend}/api/users/register`, { name: username, email, password })
-               SetUser({username: response.data.data.username, useremail: response.data.data.useremail, userId: response.data.data.userid, userrole: response.data.data.userrole})
-               setLoading(false)
-               setToken(response.data.data.token)
-               toast.success(response.data.message)
-               navigate("/")
-          } catch (error) {
-               setLoading(false)
-               if (error.response.data) {
-                    toast.warn(error.response.data.message)
-               } else {
-                    toast.warn("Failed to register")
-               }
-               console.warn("Register: ", error)
-          }
-     }
+     // Fixed handleLogin function
+const handleLogin = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    try {    
+        const response = await axios.post(`${backend}/api/user/login`, { email, password })
+        SetUser({
+            username: response.data.data.username, 
+            useremail: response.data.data.useremail, 
+            userId: response.data.data.userid, 
+            userrole: response.data.data.userrole
+        })
+        setLoading(false)
+        setToken(response.data.data.token)
+        toast.success(response.data.message)
+        navigate("/")
+    } catch (error) {
+        setLoading(false)
+        console.error("Login error:", error)
+        
+        // Improved error handling
+        if (error.response?.data?.message) {
+            toast.warn(error.response.data.message)
+        } else if (error.request) {
+            // Network error (like connection refused)
+            toast.error("Cannot connect to server. Please check if the backend is running.")
+        } else if (error.message) {
+            toast.warn(error.message)
+        } else {
+            toast.warn("An unexpected error occurred")
+        }
+    }
+}
+
+// Fixed handleRegister function
+const handleRegister = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    try {    
+        const response = await axios.post(`${backend}/api/users/register`, { name: username, email, password })
+        SetUser({
+            username: response.data.data.username, 
+            useremail: response.data.data.useremail, 
+            userId: response.data.data.userid, 
+            userrole: response.data.data.userrole
+        })
+        setLoading(false)
+        setToken(response.data.data.token)
+        toast.success(response.data.message)
+        navigate("/")
+    } catch (error) {
+        setLoading(false)
+        console.error("Register error:", error)
+        
+        // Improved error handling
+        if (error.response?.data?.message) {
+            toast.warn(error.response.data.message)
+        } else if (error.request) {
+            // Network error (like connection refused)
+            toast.error("Cannot connect to server. Please check if the backend is running.")
+        } else if (error.message) {
+            toast.warn(error.message)
+        } else {
+            toast.warn("An unexpected error occurred")
+        }
+    }
+}
+
+// Apply the same pattern to handleForgot and handleReset functions
      
      const handleForgot = async (e) => {
           e.preventDefault()
